@@ -1,3 +1,72 @@
-/* 
-    General Styles
-*/
+@import "~bootstrap/scss/bootstrap.scss";
+
+.navbar{
+    height:125px;
+    background-color:rgb(69, 74, 78);
+    display: flex;
+    justify-content: space-between;
+}
+
+.papertrade{
+    color:rgb(240, 240, 240);
+    font-size: 70px;
+    font-weight: bold;
+    margin-left:55px;
+}
+
+.papertrade:hover{
+    color:white;
+}
+
+.signup{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-right:40px;
+    //font-weight:lighter;
+}
+
+.signup:hover{
+    color:white;
+}
+
+.login{
+    color:white;
+    height:665px;
+    width:50%;
+    padding:70px;
+    font-size:20px;
+    margin-top:40px;
+}
+
+.about{
+    color:black;
+    height:665px;
+    width:50%;
+    padding:70px;
+    font-size:20px;
+    margin-top:40px;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+}
+
+.inputemail{
+    width:100%;
+}
+
+.email{
+    color:black
+}
+
+.password{
+    color:black;
+    border-color:black;
+    margin-top:50px;
+}
+
+.loginbutton{
+    background:rgb(69, 74, 78);
+    color:white;
+}
