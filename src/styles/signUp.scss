@@ -1,15 +1,25 @@
 .formContainer{
     display: flex;
+    margin: 0 auto;
+    justify-content:center;
+
     
 }
 .vertical-line{
-    border: 1px solid red;
+    border: 1px solid darkgray;
     width:1px;
-    height:200px;
+    height: 300px;
+    margin: 20px;
 }
 .form-row{
-    border:1px solid black;
+   
     display:flex;
     flex-direction: column;
     width: 33%;
+}
+.form-row input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    border-radius: 0;
 }

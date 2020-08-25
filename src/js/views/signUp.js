@@ -8,11 +8,11 @@ export function SignUp(props) {
 			<form>
 				<div className="formContainer">
 					<div className="form-row">
-						<div className="form-group col-md-6">
+						<div className="form-group ">
 							<label htmlFor="inputFirstName">FIRST NAME</label>
 							<input type="text" className="form-control" id="inputFirstName" placeholder="First Name" />
 						</div>
-						<div className="form-group col-md-6">
+						<div className="form-group">
 							<label htmlFor="inputMiddleName">MIDDLE NAME (OPTIONAL)</label>
 							<input
 								type="text"
@@ -21,7 +21,7 @@ export function SignUp(props) {
 								placeholder="Middle Name"
 							/>
 						</div>
-						<div className="form-group col-md-6">
+						<div className="form-group ">
 							<label htmlFor="inputLastName">LAST NAME</label>
 							<input type="text" className="form-control" id="inputLastName" placeholder="Last Name" />
 						</div>
@@ -44,9 +44,10 @@ export function SignUp(props) {
 						</div>
 					</div>
 				</div>
-				<button type="submit" className="btn btn-primary">
+				<button type="submit" className="btn btn-secondary">
 					Save
 				</button>
+				Back to home
 			</form>
 		</div>
 	);
