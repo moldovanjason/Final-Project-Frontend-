@@ -1,5 +1,6 @@
 import React from "react";
 import "../../styles/signUp.scss";
+import PropsTypes from "prop-types";
 //create your first component
 export function SignUp(props) {
 	return (
@@ -44,11 +45,16 @@ export function SignUp(props) {
 						</div>
 					</div>
 				</div>
-				<button type="submit" className="btn btn-secondary">
+				<button type="submit" className="signBtn btn btn-secondary">
 					Save
 				</button>
-				Back to home
+				<button type="button" className="signBtn btn btn-secondary" onClick={() => props.history.push("/home")}>
+					Cancel
+				</button>
 			</form>
 		</div>
 	);
 }
+SignUp.propTypes = {
+	history: PropsTypes.object
+};
