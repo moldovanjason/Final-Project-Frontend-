@@ -7,6 +7,13 @@
     justify-content: space-between;
 }
 
+.profilenavbar{
+    height:125px;
+    background-color:rgb(69, 74, 78);
+    display: flex;
+    // justify-content: space-between;
+}
+
 .papertrade{
     color:rgb(240, 240, 240);
     font-size: 70px;
@@ -28,6 +35,19 @@
 .signup:hover{
     color:white;
 }
+
+.editprofile{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-top:20px;
+    //font-weight:lighter;
+}
+
+.logout{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-top:20px;
+    }
 
 .login{
     color:white;
