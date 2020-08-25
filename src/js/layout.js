@@ -3,8 +3,12 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { SignUp } from "./views/demo";
-import { Profile } from "./views/single";
+import { SignUp } from "./views/signUp";
+import { Profile } from "./views/profile";
+import { EditProfile } from "./views/editProfile";
+import { NoPageFound } from "./views/noPageFound";
+import { StockPage } from "./views/stockPage";
+import { LeaderBoard } from "./views/leaderBoard";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -20,12 +24,14 @@ const Layout = () => {
 		<div className="d-flex flex-column h-100">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<Navbar />
 					<Switch>
 						<Route exact path="/" component={Home} />
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/signup" component={SignUp} />
-                        <Route exact path="/profile" component={Profile}/>
+						<Route exact path="/profile" component={Profile} />
+						<Route exact path="/editprofile" component={EditProfile} />
+						<Route exact path="/stockpage" component={StockPage} />
+						<Route exact path="/leaderboard" component={LeaderBoard} />
 
 						{/* <Route exact path="/planetsdetails/:id" component={PlanetsDetails} />
 						<Route exact path="/charactersdetails/:id" component={CharactersDetails} /> */}
@@ -33,7 +39,6 @@ const Layout = () => {
 							<h1 className="nf">***Page Not Found***</h1>
 						</Route>
 					</Switch>
-					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
 		</div>

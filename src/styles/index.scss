@@ -36,6 +36,7 @@
     padding:70px;
     font-size:20px;
     margin-top:40px;
+    // background:yellow;
 }
 
 .about{
@@ -44,16 +45,12 @@
     width:50%;
     padding:70px;
     font-size:20px;
-    margin-top:40px;
+    margin-top:50px;
 }
 
 .middle{
     display: flex;
     justify-content: center;
-}
-
-.inputemail{
-    width:100%;
 }
 
 .email{
@@ -66,7 +63,46 @@
     margin-top:50px;
 }
 
+
 .loginbutton{
     background:rgb(69, 74, 78);
+    color:rgb(240, 240, 240);
+}
+
+.loginbutton:hover{
+    color:rgb(255, 255, 255);
+}
+
+.nf{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 80px;
+    color:rgb(192, 0, 0);
+}
+
+.verticalline{
+    color:black;
+    width:100%;
+}
+
+.vlhome {
+  border-left: 1px solid rgb(69, 74, 78);
+  height: 665px;
+  margin-top:24px;
+  border-radius:5px;
+}
+
+.input{
+    width:100%;
+    border-radius:5px;
+    border:1px solid rgb(69, 74, 78);
+}
+
+.input:focus{
+    outline: none;
+}
+
+.vlprofile{
     color:white;
+    background:orange;
 }
