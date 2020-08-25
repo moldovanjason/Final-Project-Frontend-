@@ -56,7 +56,7 @@ export class EditProfile extends React.Component {
 							<label>Full Name</label>
 							<input
 								onChange={event => {
-									this.setState({ ...state, full_name: event.target.value });
+									this.setState({ ...this.state, fullName: event.target.value });
 								}}
 								type="text"
 								className="form-control"
@@ -68,7 +68,7 @@ export class EditProfile extends React.Component {
 							<label>Email</label>
 							<input
 								onChange={event => {
-									this.setState({ ...state, email: event.target.value });
+									this.setState({ ...this.state, email: event.target.value });
 								}}
 								type="email"
 								className="form-control"

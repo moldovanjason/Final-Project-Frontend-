@@ -1,0 +1,15 @@
+.formContainer{
+    display: flex;
+    
+}
+.vertical-line{
+    border: 1px solid red;
+    width:1px;
+    height:200px;
+}
+.form-row{
+    border:1px solid black;
+    display:flex;
+    flex-direction: column;
+    width: 33%;
+}
