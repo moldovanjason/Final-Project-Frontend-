@@ -27,7 +27,7 @@ export function SignUp(props) {
 						</div>
 					</div>
 
-					<div className="vertical-line" />
+					<div className="vlsignup" />
 					<div className="form-row">
 						<div className="form-group ">
 							<label htmlFor="inputEmail">EMAIL</label>
@@ -40,12 +40,17 @@ export function SignUp(props) {
 						</div>
 						<div className="form-group ">
 							<label htmlFor="inputPassword4">PASSWORD</label>
-							<input type="password" className="form-control" id="inputPassword4" />
+							<input
+								type="password"
+								className="form-control"
+								id="inputPassword4"
+								placeholder="**********"
+							/>
 						</div>
 					</div>
 				</div>
 				<button type="submit" className="btn btn-secondary">
-					Save
+					Creat Account
 				</button>
 				Back to home
 			</form>

@@ -7,13 +7,6 @@
     justify-content: space-between;
 }
 
-.profilenavbar{
-    height:125px;
-    background-color:rgb(69, 74, 78);
-    display: flex;
-    // justify-content: space-between;
-}
-
 .papertrade{
     color:rgb(240, 240, 240);
     font-size: 70px;
@@ -39,14 +32,18 @@
 .editprofile{
     color:rgb(240, 240, 240);
     font-size: 40px;
-    margin-top:20px;
+    margin-top:5px;
+    position:relative;
+    left:300px;
     //font-weight:lighter;
 }
 
 .logout{
     color:rgb(240, 240, 240);
     font-size: 40px;
-    margin-top:20px;
+    margin-top:5px;
+    position: relative;
+    right:10px;
     }
 
 .login{
@@ -100,10 +97,6 @@
     color:rgb(192, 0, 0);
 }
 
-.verticalline{
-    color:black;
-    width:100%;
-}
 
 .vlhome {
   border-left: 1px solid rgb(69, 74, 78);
@@ -114,8 +107,9 @@
 
 .input{
     width:100%;
-    border-radius:5px;
-    border:1px solid rgb(69, 74, 78);
+    border-radius:0px;
+    border:none;
+    border-bottom:1px solid rgb(69, 74, 78);
 }
 
 .input:focus{
@@ -123,6 +117,10 @@
 }
 
 .vlprofile{
-    color:white;
-    background:orange;
+  border-left: 1px solid rgb(189, 189, 189);
+  height: 80px;
+  margin-top:3px;
+  border-radius:5px;
+  position: relative;
+  left:144px;
 }

@@ -1,0 +1,21 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.profilenavbar{
+    height:125px;
+    background-color:rgb(69, 74, 78);
+    display: flex;
+    justify-content: space-between;
+}
+
+.editprofile{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-top:20px;
+    //font-weight:lighter;
+}
+
+.logout{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-top:20px;
+    }

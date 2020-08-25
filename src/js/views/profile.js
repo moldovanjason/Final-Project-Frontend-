@@ -5,21 +5,22 @@ import PropsTypes from "prop-types";
 export function Profile(props) {
 	return (
 		<div>
-			<div className="profilenavbar navbar-expand-lg ">
+			<div className="navbar navbar-expand-lg ">
 				<a className="papertrade navbar-brand" href="" onClick={() => props.history.push("/profile")}>
 					PAPER TRADE
 				</a>
-				<div className="vlprofile" />
+				{/* <div className="vlprofile" /> */}
 				<a className="editprofile nav-link" href="" onClick={() => props.history.push("/editprofile")}>
 					Edit Profile
 				</a>
+				<div className="vlprofile" />
 				<a className="logout nav-link" href="" onClick={() => props.history.push("/home")}>
 					Log Out
 				</a>
 			</div>
-			<div>Jason Moldovn</div>
-			<div>Net Paper Acount Value:10000</div>
-			<div>Buying Power:10000</div>
+			<div className="name">Jason Moldovn</div>
+			<div className="netvalue">Net Paper Acount Value:10000</div>
+			<div className="buyingpower">Buying Power:10000</div>
 			<div>
 				<div>Buy Stocks</div>
 				<div>Transaction History</div>
