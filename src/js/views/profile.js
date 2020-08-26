@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar";
 import { Context } from "../store/appContext";
 // import { Context } from "../store/flux";
@@ -17,7 +17,7 @@ export function Profile(props) {
 					Log Out
 				</a>
 			</div>
-			<Navbar />
+			<Navbar {...props} />
 			<div className="name">Jason Moldovn</div>
 			<div className="portfoliovalue">{store.portfolioValue}</div>
 			<div className="buyingpower">{store.buyingPower}</div>
@@ -26,7 +26,7 @@ export function Profile(props) {
 				<div>Transaction History</div>
 				<div>Leader Board</div>
 			</div> */}
-			<div>MY STOCKS</div>
+			<div>MY STOCKS </div>
 			<div>
 				<table className="table table-borderless">
 					<thead>
@@ -63,5 +63,5 @@ export function Profile(props) {
 }
 
 Profile.propTypes = {
-	history: PropsTypes.object
+	history: PropTypes.object
 };

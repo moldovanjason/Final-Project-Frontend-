@@ -1,14 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import { withRouter } from "react-router-dom";
+import { StockPage } from "../views/stockPage";
+import { PropTypes } from "prop-types";
+import { withRouter } from "react-router-dom";
 
-export const Navbar = () => {
+export const Navbar = props => {
+	console.log(props);
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<div className="collapse navbar-collapse" id="navbarNav">
 				<ul className="navbartext navbar-nav">
 					<li className="nav-item">
-						<a className="tradestocks nav-link" href="/stockpage">
+						<a
+							className="tradestocks nav-link"
+							href="/stockpage"
+							onClick={() => props.history.push("/stockpage")}>
 							Trade Stocks
 						</a>
 					</li>
@@ -32,5 +38,8 @@ export const Navbar = () => {
 		</nav>
 	);
 };
+Navbar.propTypes = {
+	history: PropTypes.object
+};
 
-export default Navbar;
+export default withRouter(Navbar);
