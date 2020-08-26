@@ -13,10 +13,6 @@ export function Profile(props) {
 				<a className="papertrade navbar-brand" href="" onClick={() => props.history.push("/profile")}>
 					PAPER TRADE
 				</a>
-				<a className="editprofile nav-link" href="" onClick={() => props.history.push("/editprofile")}>
-					Edit Profile
-				</a>
-				<div className="vlprofile" />
 				<a className="logout nav-link" href="" onClick={() => props.history.push("/home")}>
 					Log Out
 				</a>

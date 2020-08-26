@@ -23,7 +23,7 @@ export const Navbar = () => {
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="editprofilee nav-link" href="">
+						<a className="editprofilee nav-link" href="/editprofile">
 							Edit Profile
 						</a>
 					</li>
