@@ -45,7 +45,7 @@ export class EditProfile extends React.Component {
 					<a className="papertrade navbar-brand" href="">
 						PAPER TRADE
 					</a>
-					<a className="signup nav-link" href="#" onClick={() => props.history.push("/signup")}>
+					<a className="signup nav-link" href="#" onClick={() => this.props.history.push("/signup")}>
 						Sign Up
 					</a>
 				</div>
@@ -80,7 +80,7 @@ export class EditProfile extends React.Component {
 							<label>Password</label>
 							<input
 								onChange={event => {
-									this.setState({ ...state, password: event.target.value });
+									this.setState({ ...this.state, password: event.target.value });
 								}}
 								type="password"
 								className="form-control"
@@ -91,7 +91,7 @@ export class EditProfile extends React.Component {
 						<button
 							// disabled={disabledButton}
 							onClick={() => {
-								this.editContact(state.fullName, state.email, props.match.params.id);
+								this.editContact(this.state.fullName, this.state.email, props.match.params.id);
 								props.history.push("/profile");
 							}}
 							type="button"
