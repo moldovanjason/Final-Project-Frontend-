@@ -44,8 +44,8 @@ export class EditProfile extends React.Component {
 					<a className="papertrade navbar-brand" href="">
 						PAPER TRADE
 					</a>
-					<a className="signup nav-link" href="#" onClick={() => this.props.history.push("/signup")}>
-						Sign Up
+					<a className="logout nav-link" href="" onClick={() => this.props.history.push("/home")}>
+						Log Out
 					</a>
 				</div>
 				<div>

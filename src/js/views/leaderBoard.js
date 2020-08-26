@@ -10,7 +10,7 @@ export function LeaderBoard(props) {
 				<a className="papertrade navbar-brand" href="" onClick={() => this.props.history.push("/profile")}>
 					PAPER TRADE
 				</a>
-				<a className="logout nav-link" href="" onClick={() => this.props.history.push("/home")}>
+				<a className="logout nav-link" href="" onClick={() => props.history.push("/home")}>
 					Log Out
 				</a>
 			</div>
