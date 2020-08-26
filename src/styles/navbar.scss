@@ -1,6 +1,52 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 .navbar{
-    background:orange !important;
-    color:blue;
+    background-color:rgb(0, 0, 0);
+    height:40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tradestocks{
+    color:rgb(235, 235, 235);
+    font-size:20px;
+    margin-left:300px;
+    margin-right:40px;
+}
+
+.tradestocks:hover{
+    color:white;
+}
+
+.transactionhistory{
+    color:rgb(235, 235, 235);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.transactionhistory:hover{
+    color:white;
+}
+
+.leaderboard{
+    color:rgb(235, 235, 235);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.leaderboard:hover{
+    color:white;
+}
+
+.editprofilee{
+    color:rgb(235, 235, 235);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.editprofilee:hover{
+    color:white;
 }
