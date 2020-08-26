@@ -40,7 +40,6 @@ export class EditProfile extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>edit profile</h1>
 				<div className="navbar navbar-expand-lg ">
 					<a className="papertrade navbar-brand" href="">
 						PAPER TRADE
@@ -50,8 +49,8 @@ export class EditProfile extends React.Component {
 					</a>
 				</div>
 				<div>
-					<h1 className="text-center mt-5">Edit Profile</h1>
-					<form>
+					<h1 className="editProfile text-center mt-5">Edit Profile</h1>
+					<form className="editform">
 						<div className="form-group">
 							<label>Full Name</label>
 							<input
@@ -59,7 +58,7 @@ export class EditProfile extends React.Component {
 									this.setState({ ...this.state, fullName: event.target.value });
 								}}
 								type="text"
-								className="form-control"
+								className="nameinput"
 								placeholder="Enter New Full Name"
 								value={this.state.full_name}
 							/>
