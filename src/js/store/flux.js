@@ -1,16 +1,15 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
+			portfolioValue: 0,
+			buyingPower: 0,
+			stocks: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
+					name: "apple",
+					symbol: "aapl",
+					price: 500,
+					shares: 0,
+					currentValue: 1000
 				}
 			]
 		},
