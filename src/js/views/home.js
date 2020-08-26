@@ -7,7 +7,7 @@ export function Home(props) {
 	// console.log(props);
 	return (
 		<div>
-			<div className="navbar navbar-expand-lg ">
+			<div className="header navbar-expand-lg ">
 				<a className="papertrade navbar-brand" href="">
 					PAPER TRADE
 				</a>

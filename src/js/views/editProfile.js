@@ -40,7 +40,7 @@ export class EditProfile extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="navbar navbar-expand-lg ">
+				<div className="header navbar-expand-lg ">
 					<a className="papertrade navbar-brand" href="">
 						PAPER TRADE
 					</a>
@@ -90,7 +90,7 @@ export class EditProfile extends React.Component {
 						<button
 							// disabled={disabledButton}
 							onClick={() => {
-								this.editContact(this.state.fullName, this.state.email, props.match.params.id);
+								this.editContact(this.state.fullName, this.state.email, this.props.match.params.id);
 								props.history.push("/profile");
 							}}
 							type="button"
@@ -109,5 +109,6 @@ export class EditProfile extends React.Component {
 }
 
 EditProfile.propTypes = {
-	history: PropsTypes.object
+	history: PropsTypes.object,
+	match: PropsTypes.onject
 };

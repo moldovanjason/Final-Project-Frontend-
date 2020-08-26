@@ -1,13 +1,15 @@
-import React, { component } from "react";
+import React, { useContext } from "react";
 import PropsTypes from "prop-types";
 import { Navbar } from "../component/navbar";
+import { Context } from "../store/appContext";
+// import { Context } from "../store/flux";
 
 //create your first component
 export function Profile(props) {
-	const { store } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	return (
 		<div>
-			<div className="navbar navbar-expand-lg ">
+			<div className="header navbar-expand-lg ">
 				<a className="papertrade navbar-brand" href="" onClick={() => props.history.push("/profile")}>
 					PAPER TRADE
 				</a>

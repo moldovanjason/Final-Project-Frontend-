@@ -1,12 +1,12 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			portfolioValue: 0,
-			buyingPower: 0,
+			portfolioValue: 5000,
+			buyingPower: 5000,
 			stocks: [
 				{
 					name: "apple",
-					symbol: "aapl",
+					symbol: "AAPL",
 					price: 500,
 					shares: 0,
 					currentValue: 1000
