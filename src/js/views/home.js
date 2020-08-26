@@ -15,6 +15,13 @@ export class Home extends React.Component {
 			show: true
 		});
 	};
+
+	closeModal = () => {
+		this.setState({
+			show: false
+		});
+	};
+
 	render() {
 		return (
 			<>
@@ -62,7 +69,7 @@ export class Home extends React.Component {
 							{/* <SignUp /> */}
 						</form>
 					</div>
-					<SignUpModal show={this.state.show} />
+					<SignUpModal show={this.state.show} hideModal={() => this.closeModal()} />
 					<div className="vlhome" />
 					<div className="about">
 						About PAPER TRADE. THIS IS WHERE WE WILL TELL YOU WHAT THIS WEBSITE IS ABOUT, WHAT YOU CAN DO

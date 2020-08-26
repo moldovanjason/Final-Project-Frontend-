@@ -11,7 +11,12 @@ export const SignUpModal = props => {
 				<div className="modal-content">
 					<div className="modal-header">
 						<h5 className="modal-title">Sign Up</h5>
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close">
+						<button
+							type="button"
+							className="close"
+							data-dismiss="modal"
+							aria-label="Close"
+							onClick={() => props.hideModal()}>
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
@@ -50,7 +55,12 @@ export const SignUpModal = props => {
 						<button type="button" className="btn btn-secondary">
 							Save
 						</button>
-						<button type="button" className="btn btn-secondary" data-dismiss="modal">
+						<button
+							type="button"
+							href="/home"
+							className="btn btn-secondary"
+							onClick={() => props.hideModal()}
+							data-dismiss="modal">
 							Cancel
 						</button>
 					</div>
@@ -60,5 +70,6 @@ export const SignUpModal = props => {
 	);
 };
 SignUpModal.propTypes = {
-	show: PropTypes.bool
+	show: PropTypes.bool,
+	hideModal: PropTypes.func
 };
