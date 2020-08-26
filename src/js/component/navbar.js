@@ -4,26 +4,26 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<div className=" navbar-collapse" id="navbarNav">
-				<ul className="navbar-nav">
-					<li className="nav-item active">
-						<a className="nav-link" href="#">
-							Trade Stocks {/*<span className="sr-only">(current)</span>*/}
+		<nav className="navbar navbar-expand-lg">
+			<div className="collapse navbar-collapse" id="navbarNav">
+				<ul className="navbartext navbar-nav">
+					<li className="nav-item">
+						<a className="tradestocks nav-link" href="/stockpage">
+							Trade Stocks
 						</a>
 					</li>
-					<li claclassNamess="nav-item">
-						<a className="nav-link" href="#">
+					<li className="nav-item">
+						<a className="transactionhistory nav-link" href="/transactionhistory">
 							Transaction History
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="#">
-							Leader Boards
+						<a className="leaderboard nav-link" href="/leaderboard">
+							Leader Board
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="#">
+						<a className="editprofilee nav-link" href="">
 							Edit Profile
 						</a>
 					</li>
@@ -31,7 +31,7 @@ export const Navbar = () => {
 			</div>
 		</nav>
 
-		// <nav className="navbar navbar-light bg-light mb-3">
+		// <na className="nav-link" href="#"v className="navbar navbar-light bg-light mb-3">
 		// 	<Link to="/">
 		// 		<span className="navbar-brand mb-0 h1">React Boilerplate</span>
 		// 	</Link>
