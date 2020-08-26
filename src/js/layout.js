@@ -10,7 +10,7 @@ import { NoPageFound } from "./views/noPageFound";
 import { StockPage } from "./views/stockPage";
 import { LeaderBoard } from "./views/leaderBoard";
 import injectContext from "./store/appContext";
-
+import { TransactionHistory } from "./views/transactionHistory";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -32,6 +32,7 @@ const Layout = () => {
 						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/stockpage" component={StockPage} />
 						<Route exact path="/leaderboard" component={LeaderBoard} />
+						<Route exact path="/transactionhistory" component={TransactionHistory} />
 
 						{/* <Route exact path="/planetsdetails/:id" component={PlanetsDetails} />
 						<Route exact path="/charactersdetails/:id" component={CharactersDetails} /> */}
