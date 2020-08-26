@@ -1,9 +1,20 @@
 import React from "react";
+import PropsTypes from "prop-types";
+import { Navbar } from "../component/navbar";
 
 //create your first component
 export function TransactionHistory(props) {
 	return (
 		<div className="transaction-table">
+			<div className="header navbar-expand-lg ">
+				<a className="papertrade navbar-brand" href="" onClick={() => this.props.history.push("/profile")}>
+					PAPER TRADE
+				</a>
+				<a className="logout nav-link" href="" onClick={() => this.props.history.push("/home")}>
+					Log Out
+				</a>
+			</div>
+			<Navbar />
 			<h1>Transaction History </h1>
 			<div>
 				<thead>
@@ -38,3 +49,7 @@ export function TransactionHistory(props) {
 		</div>
 	);
 }
+
+TransactionHistory.propTypes = {
+	history: PropsTypes.object
+};
