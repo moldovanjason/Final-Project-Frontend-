@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { StockPage } from "../views/stockPage";
 import { PropTypes } from "prop-types";
 import { withRouter } from "react-router-dom";
+import { SignUpModal } from "../component/signUpModal";
 
 export const Header = props => {
 	// console.log(props);
@@ -16,6 +17,14 @@ export const Header = props => {
 			</a>
 			<a className="logout nav-link" href="/home" onClick={() => props.history.push("/home")}>
 				Log Out
+			</a>
+			<a
+				className="signup nav-link"
+				href="#"
+				onClick={() => {
+					this.showModal();
+				}}>
+				Sign Up
 			</a>
 		</div>
 	);
