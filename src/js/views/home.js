@@ -62,7 +62,7 @@ export class Home extends React.Component {
 							</div>
 							<button
 								type="submit"
-								onClick={() => this.props.history.push("/profile")}
+								onClick={() => this.props.history.push("/myStocks")}
 								className="loginbutton btn">
 								Log In
 							</button>

@@ -29,8 +29,8 @@ export const Navbar = props => {
 						</a>
 					</li>
 					<li className="nav-item">
-						<a className="traderprofile nav-link" href="/traderprofile">
-							Trader Profile
+						<a className="mystocks nav-link" href="/mystocks">
+							My Stocks
 						</a>
 					</li>
 					<li className="nav-item">

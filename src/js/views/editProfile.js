@@ -45,14 +45,14 @@ export class EditProfile extends React.Component {
 					<h1 className="editProfile text-center mt-5">Edit Profile</h1>
 					<form className="editform">
 						<div className="form-group">
-							<label>Full Name</label>
+							<label>Username</label>
 							<input
 								onChange={event => {
 									this.setState({ ...this.state, fullName: event.target.value });
 								}}
 								type="text"
 								className="nameinput"
-								placeholder="Enter New Full Name"
+								placeholder="Enter New Username"
 								value={this.state.full_name}
 							/>
 						</div>
@@ -91,7 +91,7 @@ export class EditProfile extends React.Component {
 						>
 							save
 						</button>
-						<Link className="mt-3 w-100 text-center" to="/traderprofile">
+						<Link className="mt-3 w-100 text-center" to="/mystocks">
 							or get back to profile
 						</Link>
 					</form>

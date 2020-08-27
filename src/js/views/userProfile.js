@@ -12,9 +12,8 @@ export function UserProfile(props) {
 		<div>
 			<Header />
 			<Navbar {...props} />
-			<div className="name">Jason Moldovn</div>
-			<div className="portfoliovalue">{store.portfolioValue}</div>
-			<div className="buyingpower">{store.buyingPower}</div>
+			<div className="username">something Smith</div>
+			<div className="email">something@gmail.com</div>
 		</div>
 	);
 }

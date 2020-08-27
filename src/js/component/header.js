@@ -18,14 +18,6 @@ export const Header = props => {
 			<a className="logout nav-link" href="/home" onClick={() => props.history.push("/home")}>
 				Log Out
 			</a>
-			<a
-				className="signup nav-link"
-				href="#"
-				onClick={() => {
-					this.showModal();
-				}}>
-				Sign Up
-			</a>
 		</div>
 	);
 };

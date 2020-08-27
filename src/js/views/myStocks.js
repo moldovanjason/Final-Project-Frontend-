@@ -6,7 +6,7 @@ import { Header } from "../component/header";
 // import { Context } from "../store/flux";
 
 //create your first component
-export function TraderProfile(props) {
+export function MyStocks(props) {
 	const { store, actions } = useContext(Context);
 	return (
 		<div>
@@ -17,31 +17,32 @@ export function TraderProfile(props) {
 			<div className="buyingpower">{store.buyingPower}</div>
 			<h1>MY STOCKS </h1>
 			<div>
-				<table className="table table-borderless">
+				<table className="table table-striped">
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">First</th>
-							<th scope="col">Last</th>
-							<th scope="col">Handle</th>
+							<th scope="col">Symbol</th>
+							<th scope="col">Name</th>
+							<th scope="col">Price</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row">1</th>
+							<td scope="row">1</td>
 							<td>Mark</td>
 							<td>Otto</td>
 							<td>@mdo</td>
 						</tr>
 						<tr>
-							<th scope="row">2</th>
+							<td scope="row">2</td>
 							<td>Jacob</td>
 							<td>Thornton</td>
 							<td>@fat</td>
 						</tr>
 						<tr>
-							<th scope="row">3</th>
-							<td colSpan="2">Larry the Bird</td>
+							<td scope="row">3</td>
+							<td>Larry</td>
+							<td>the Bird</td>
 							<td>@twitter</td>
 						</tr>
 					</tbody>
@@ -51,6 +52,6 @@ export function TraderProfile(props) {
 	);
 }
 
-TraderProfile.propTypes = {
+MyStocks.propTypes = {
 	history: PropTypes.object
 };

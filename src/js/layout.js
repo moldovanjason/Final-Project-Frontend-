@@ -4,7 +4,7 @@ import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
 import { SignUp } from "./views/signUp";
-import { TraderProfile } from "./views/traderProfile";
+import { MyStocks } from "./views/myStocks";
 import { EditProfile } from "./views/editProfile";
 import { NoPageFound } from "./views/noPageFound";
 import { StockPage } from "./views/stockPage";
@@ -29,7 +29,7 @@ const Layout = () => {
 						<Route exact path="/" component={Home} />
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/userprofile" component={UserProfile} />
-						<Route exact path="/traderprofile" component={TraderProfile} />
+						<Route exact path="/mystocks" component={MyStocks} />
 						<Route exact path="/editprofile" component={EditProfile} />
 						<Route exact path="/stockpage" component={StockPage} />
 						<Route exact path="/leaderboard" component={LeaderBoard} />
