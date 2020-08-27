@@ -15,7 +15,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 			createUser: (username, email, password) => {
-				console.log("user created with", username, email, password);
+				// console.log("user created with", username, email, password);
 				// fetch("", {
 				// 	method: "POST",
 				// 	headers: { "Content-Type": "application/json" },
