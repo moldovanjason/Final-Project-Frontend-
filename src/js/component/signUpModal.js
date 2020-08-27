@@ -8,8 +8,8 @@ export const SignUpModal = props => {
 	return (
 		<div className={show ? "h-view" : "modal"} tabIndex="-1" role="dialog">
 			<div className="modal-dialog" role="document">
-				<div className="modal-content">
-					<div className="modal-header">
+				<div className="signupmodal modal-content">
+					<div className="signupmodalheader modal-header">
 						<h5 className="modal-title">Sign Up</h5>
 						<button
 							type="button"
@@ -22,8 +22,8 @@ export const SignUpModal = props => {
 					</div>
 					<div className="modal-body">
 						<div className="form-row">
-							<div className="form-group ">
-								<label htmlFor="inputFirstName"> USER NAME</label>
+							<div className="usernamesignup form-group ">
+								<label htmlFor="inputFirstName">USER NAME</label>
 								<input
 									type="text"
 									className="form-control"
@@ -31,7 +31,7 @@ export const SignUpModal = props => {
 									placeholder="username"
 								/>
 							</div>
-							<div className="form-group ">
+							<div className="emailsignup form-group ">
 								<label htmlFor="inputEmail">EMAIL</label>
 								<input
 									type="text"
@@ -40,7 +40,7 @@ export const SignUpModal = props => {
 									placeholder="something@email.com"
 								/>
 							</div>
-							<div className="form-group ">
+							<div className="passwordsignup form-group ">
 								<label htmlFor="inputPassword4">PASSWORD</label>
 								<input
 									type="password"
@@ -51,14 +51,14 @@ export const SignUpModal = props => {
 							</div>
 						</div>
 					</div>
-					<div className="modal-footer">
-						<button type="button" className="btn btn-secondary">
-							Save
+					<div className="signupmodalfooter modal-footer">
+						<button type="button" className="createaccountbutton btn btn-secondary">
+							Create Account
 						</button>
 						<button
 							type="button"
 							href="/home"
-							className="btn btn-secondary"
+							className="cancelbutton btn btn-secondary"
 							onClick={() => props.hideModal()}
 							data-dismiss="modal">
 							Cancel
