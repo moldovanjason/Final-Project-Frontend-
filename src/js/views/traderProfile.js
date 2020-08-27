@@ -2,31 +2,20 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar";
 import { Context } from "../store/appContext";
+import { Header } from "../component/header";
 // import { Context } from "../store/flux";
 
 //create your first component
-export function Profile(props) {
+export function TraderProfile(props) {
 	const { store, actions } = useContext(Context);
 	return (
 		<div>
-			<div className="header navbar-expand-lg ">
-				<a className="papertrade navbar-brand" href="" onClick={() => props.history.push("/profile")}>
-					PAPER TRADE
-				</a>
-				<a className="logout nav-link" href="" onClick={() => props.history.push("/home")}>
-					Log Out
-				</a>
-			</div>
+			<Header />
 			<Navbar {...props} />
 			<div className="name">Jason Moldovn</div>
 			<div className="portfoliovalue">{store.portfolioValue}</div>
 			<div className="buyingpower">{store.buyingPower}</div>
-			{/* <div>
-				<div>Buy Stocks</div>
-				<div>Transaction History</div>
-				<div>Leader Board</div>
-			</div> */}
-			<div>MY STOCKS </div>
+			<h1>MY STOCKS </h1>
 			<div>
 				<table className="table table-borderless">
 					<thead>
@@ -62,6 +51,6 @@ export function Profile(props) {
 	);
 }
 
-Profile.propTypes = {
+TraderProfile.propTypes = {
 	history: PropTypes.object
 };

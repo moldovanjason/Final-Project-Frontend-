@@ -1,7 +1,7 @@
 import React from "react";
 import PropsTypes from "prop-types";
 import { Link } from "react-router-dom";
-
+import { Header } from "../component/header";
 //create your first component
 export class EditProfile extends React.Component {
 	constructor(props) {
@@ -40,14 +40,7 @@ export class EditProfile extends React.Component {
 	render() {
 		return (
 			<div>
-				<div className="header navbar-expand-lg ">
-					<a className="papertrade navbar-brand" href="">
-						PAPER TRADE
-					</a>
-					<a className="logout nav-link" href="" onClick={() => this.props.history.push("/home")}>
-						Log Out
-					</a>
-				</div>
+				<Header />
 				<div>
 					<h1 className="editProfile text-center mt-5">Edit Profile</h1>
 					<form className="editform">
@@ -91,14 +84,14 @@ export class EditProfile extends React.Component {
 							// disabled={disabledButton}
 							onClick={() => {
 								this.editContact(this.state.fullName, this.state.email, this.props.match.params.id);
-								props.history.push("/profile");
+								props.history.push("/traderprofile");
 							}}
 							type="button"
 							// className={`btn ${disabledButton ? "btn-secondary" : "btn-primary"} form-control`}
 						>
 							save
 						</button>
-						<Link className="mt-3 w-100 text-center" to="/profile">
+						<Link className="mt-3 w-100 text-center" to="/traderprofile">
 							or get back to profile
 						</Link>
 					</form>

@@ -2,6 +2,7 @@ import React from "react";
 import PropsTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";
+import { Header } from "../component/header";
 
 //create your first component
 
@@ -25,19 +26,7 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<>
-				<div className="header navbar-expand-lg ">
-					<a className="papertrade navbar-brand" href="">
-						PAPER TRADE
-					</a>
-					<a
-						className="signup nav-link"
-						href="#"
-						onClick={() => {
-							this.showModal();
-						}}>
-						Sign Up
-					</a>
-				</div>
+				<Header />
 				<div className="middle">
 					<div className="login">
 						<form>
@@ -62,7 +51,7 @@ export class Home extends React.Component {
 							</div>
 							<button
 								type="submit"
-								onClick={() => this.props.history.push("/profile")}
+								onClick={() => this.props.history.push("/traderprofile")}
 								className="loginbutton btn">
 								Log In
 							</button>

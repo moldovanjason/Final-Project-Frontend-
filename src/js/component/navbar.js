@@ -5,7 +5,7 @@ import { PropTypes } from "prop-types";
 import { withRouter } from "react-router-dom";
 
 export const Navbar = props => {
-	console.log(props);
+	// console.log(props);
 	return (
 		<nav className="navbar navbar-expand-lg">
 			<div className="collapse navbar-collapse" id="navbarNav">
@@ -26,6 +26,16 @@ export const Navbar = props => {
 					<li className="nav-item">
 						<a className="leaderboard nav-link" href="/leaderboard">
 							Leader Board
+						</a>
+					</li>
+					<li className="nav-item">
+						<a className="traderprofile nav-link" href="/traderprofile">
+							Trader Profile
+						</a>
+					</li>
+					<li className="nav-item">
+						<a className="userprofile nav-link" href="/userprofile">
+							User Profile
 						</a>
 					</li>
 					<li className="nav-item">

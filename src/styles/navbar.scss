@@ -2,15 +2,15 @@
 
 .navbar{
     background-color:rgb(69, 74, 78);
-    height:25px;
+    height:30px;
     display: flex;
     justify-content: space-evenly;
 }
 
 .tradestocks{
-    color:rgb(235, 235, 235);
+    color:rgb(220, 220, 220);
     font-size:20px;
-    margin-left:300px;
+    margin-left:90px;
     margin-right:40px;
 }
 
@@ -19,7 +19,7 @@
 }
 
 .transactionhistory{
-    color:rgb(235, 235, 235);
+    color:rgb(220, 220, 220);
     font-size:20px;
     margin-left:40px;
     margin-right:40px;
@@ -30,7 +30,7 @@
 }
 
 .leaderboard{
-    color:rgb(235, 235, 235);
+    color:rgb(220, 220, 220);
     font-size:20px;
     margin-left:40px;
     margin-right:40px;
@@ -41,12 +41,34 @@
 }
 
 .editprofilee{
-    color:rgb(235, 235, 235);
+    color:rgb(220, 220, 220);
     font-size:20px;
     margin-left:40px;
     margin-right:40px;
 }
 
 .editprofilee:hover{
+    color:white;
+}
+
+.userprofile{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.userprofile:hover{
+    color:white;
+}
+
+.traderprofile{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.traderprofile:hover{
     color:white;
 }
