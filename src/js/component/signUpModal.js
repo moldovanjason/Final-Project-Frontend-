@@ -40,7 +40,7 @@ export const SignUpModal = props => {
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-					<form onSubmit={handleSubmit}>
+					<form>
 						<div className="modal-body">
 							<div className="form-row">
 								<div className="usernamesignup form-group ">
@@ -61,7 +61,7 @@ export const SignUpModal = props => {
 									<label htmlFor="inputEmail">EMAIL</label>
 									<input
 										onChange={event => {
-											setState({ ...state, email: event.target.value });
+											this.setState({ ...state, email: event.target.value });
 										}}
 										value={state.email}
 										type="text"
@@ -75,7 +75,7 @@ export const SignUpModal = props => {
 									<label htmlFor="inputPassword4">PASSWORD</label>
 									<input
 										onChange={event => {
-											setState({ ...state, password: event.target.value });
+											this.setState({ ...state, password: event.target.value });
 										}}
 										value={state.password}
 										type="password"
@@ -88,7 +88,10 @@ export const SignUpModal = props => {
 							</div>
 						</div>
 						<div className="signupmodalfooter modal-footer">
-							<button type="submit" className="createaccountbutton btn btn-secondary">
+							<button
+								type="submit"
+								className="createaccountbutton btn btn-secondary"
+								onClick={e => handleSubmit(e)}>
 								Create Account
 							</button>
 							<button

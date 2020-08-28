@@ -12,9 +12,18 @@ export function MyStocks(props) {
 		<div>
 			<Header />
 			<Navbar {...props} />
-			<div className="name">Jason Moldovn</div>
-			<div className="portfoliovalue">{store.portfolioValue}</div>
-			<div className="buyingpower">{store.buyingPower}</div>
+			<div className="username">
+				Username:
+				{store.username}
+			</div>
+			<div className="portfoliovalue">
+				Portfolio Value:
+				{store.portfolioValue}
+			</div>
+			<div className="buyingpower">
+				Buying Power:
+				{store.buyingPower}
+			</div>
 			<h1 className="mystockstitle">MY STOCKS </h1>
 			<div>
 				<table className="table table-striped">

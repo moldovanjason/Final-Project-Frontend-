@@ -9,7 +9,7 @@ export function LeaderBoard(props) {
 		<div>
 			<Header />
 			<Navbar />
-			<table className="table table-hover">
+			<table className="table table-striped">
 				<thead>
 					<tr>
 						<th scope="col">#</th>
@@ -20,13 +20,13 @@ export function LeaderBoard(props) {
 				</thead>
 				<tbody>
 					<tr>
-						<th scope="row">1</th>
+						<td scope="row">1</td>
 						<td>Mark221</td>
 						<td>+ $204.60</td>
 						<td>@mdo</td>
 					</tr>
 					<tr>
-						<th scope="row">2</th>
+						<td scope="row">2</td>
 						<td>JacobT</td>
 						<td>- $20.62</td>
 						<td>@fat</td>

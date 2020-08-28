@@ -1,8 +1,11 @@
+const URI = "https://3000-bbbf7b0d-e9c3-40ad-b7cc-c5e9d903fd06.ws-us02.gitpod.io";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			portfolioValue: 5000,
 			buyingPower: 5000,
+			username: "Moldovanjason",
 			stocks: [
 				{
 					name: "apple",
@@ -16,21 +19,25 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			createUser: (username, email, password) => {
 				// console.log("user created with", username, email, password);
-				fetch("https://3000-a4b6720d-745b-4334-8d88-7995ebc687a6.ws-us02.gitpod.io/register_user", {
+				fetch(URI + "/register_user", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
-						// username: username,
+						username: username,
 						email: email,
 						password: password
 					})
 				})
 					.then(data => data.json().then(response => ({ status: data.status, resMsg: response.msg })))
 					.then(({ status, resMsg }) => {
-						if (status === 400) alert(resMsg);
+						alert("THE ALERT", resMsg, status);
 					})
 					.catch(err => alert(err.message));
-			},
+            },
+            
+            // signInUser: () => {
+
+            // }
 
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {

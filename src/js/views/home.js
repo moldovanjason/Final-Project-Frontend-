@@ -8,7 +8,11 @@ import { SignUpModal } from "../component/signUpModal";
 export class Home extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { show: false };
+		this.state = {
+			show: false,
+			username: "",
+			password: ""
+		};
 	}
 	showModal = () => {
 		this.setState({
@@ -42,8 +46,12 @@ export class Home extends React.Component {
 					<div className="login">
 						<form>
 							<div className="email form-group">
-								<label /*htmlfor="exampleInputEmail1"*/>Email Address or Username</label>
+								<label /*htmlfor="exampleInputEmail1"*/>Username</label>
 								<input
+									onChange={event => {
+										this.setState({ ...this.state, username: event.target.value });
+									}}
+									value={this.state.username}
 									className="input"
 									type="email"
 									id="exampleInputEmail1"
@@ -54,6 +62,10 @@ export class Home extends React.Component {
 							<div className="password form-group">
 								<label /*htmlfor="exampleInputPassword1"*/>Password</label>
 								<input
+									onChange={event => {
+										this.setState({ ...this.state, password: event.target.value });
+									}}
+									value={this.state.password}
 									type="password"
 									className="input"
 									id="exampleInputPassword1"
