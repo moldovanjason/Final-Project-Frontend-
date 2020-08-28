@@ -61,7 +61,7 @@ export const SignUpModal = props => {
 									<label htmlFor="inputEmail">EMAIL</label>
 									<input
 										onChange={event => {
-											this.setState({ ...state, email: event.target.value });
+											setState({ ...state, email: event.target.value });
 										}}
 										value={state.email}
 										type="text"
@@ -75,7 +75,7 @@ export const SignUpModal = props => {
 									<label htmlFor="inputPassword4">PASSWORD</label>
 									<input
 										onChange={event => {
-											this.setState({ ...state, password: event.target.value });
+											setState({ ...state, password: event.target.value });
 										}}
 										value={state.password}
 										type="password"

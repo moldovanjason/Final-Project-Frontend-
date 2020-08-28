@@ -33,11 +33,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 						alert("THE ALERT", resMsg, status);
 					})
 					.catch(err => alert(err.message));
-            },
-            
-            // signInUser: () => {
+			},
 
-            // }
+			// signInUser: () => {
+
+			// }
 
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
