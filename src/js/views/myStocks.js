@@ -20,24 +20,27 @@ export function MyStocks(props) {
 				<table className="table table-striped">
 					<thead>
 						<tr>
-							<th scope="col">#</th>
 							<th scope="col">Symbol</th>
 							<th scope="col">Name</th>
+							<th scope="col">Shares</th>
 							<th scope="col">Price</th>
+							<th scope="col">Total Return</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
-							<td scope="row">1</td>
 							<td>AAPL</td>
 							<td>Apple Inc</td>
+							<td>1</td>
 							<td>$500.04</td>
+							<td>$4.90</td>
 						</tr>
 						<tr>
-							<td scope="row">2</td>
 							<td>GOOGL</td>
 							<td>Alphabet Inc</td>
+							<td>1</td>
 							<td>$1628.52</td>
+							<td>-$0.36</td>
 						</tr>
 					</tbody>
 				</table>

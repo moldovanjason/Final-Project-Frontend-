@@ -41,7 +41,7 @@ export class EditProfile extends React.Component {
 		return (
 			<div>
 				<Header />
-				<div>
+				<div className="container-fluid">
 					<h1 className="editProfile text-center mt-5">Edit Profile</h1>
 					<form className="editform">
 						<div className="form-group">
@@ -92,7 +92,7 @@ export class EditProfile extends React.Component {
 							save
 						</button>
 						<Link className="mt-3 w-100 text-center" to="/mystocks">
-							or get back to profile
+							or get back to My Stocks
 						</Link>
 					</form>
 				</div>
