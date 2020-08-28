@@ -9,10 +9,7 @@ export const Header = props => {
 	// console.log(props);
 	return (
 		<div className="header navbar-expand-lg ">
-			<a
-				className="papertrade navbar-brand"
-				href="/traderprofile"
-				onClick={() => props.history.push("/traderprofile")}>
+			<a className="papertrade navbar-brand" href="/mystocks" onClick={() => props.history.push("/mystocks")}>
 				PAPER TRADE
 			</a>
 			<a className="logout nav-link" href="/home" onClick={() => props.history.push("/home")}>

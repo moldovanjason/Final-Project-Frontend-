@@ -38,11 +38,6 @@ export const Navbar = props => {
 							User Profile
 						</a>
 					</li>
-					<li className="nav-item">
-						<a className="editprofilee nav-link" href="/editprofile">
-							Edit Profile
-						</a>
-					</li>
 				</ul>
 			</div>
 		</nav>

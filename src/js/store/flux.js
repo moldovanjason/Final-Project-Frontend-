@@ -16,21 +16,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			createUser: (username, email, password) => {
 				// console.log("user created with", username, email, password);
-				// fetch("", {
-				// 	method: "POST",
-				// 	headers: { "Content-Type": "application/json" },
-				// 	body: JSON.stringify({
-				// 		username: username,
-				//         email: email,
-				//         password: password
-				// 	})
-				// })
-				//     .then(data => data.json()
-				//     .then(response => ({ status: data.status, resMsg: response.msg })))
-				// 	.then(({ status, resMsg }) => {
-				// 		if (status === 400) alert(resMsg);
-				// 	})
-				// 	.catch(err => alert(err.message));
+				fetch("https://3000-a4b6720d-745b-4334-8d88-7995ebc687a6.ws-us02.gitpod.io/register_user", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						// username: username,
+						email: email,
+						password: password
+					})
+				})
+					.then(data => data.json().then(response => ({ status: data.status, resMsg: response.msg })))
+					.then(({ status, resMsg }) => {
+						if (status === 400) alert(resMsg);
+					})
+					.catch(err => alert(err.message));
 			},
 
 			// Use getActions to call a function within a fuction

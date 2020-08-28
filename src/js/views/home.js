@@ -26,7 +26,7 @@ export class Home extends React.Component {
 		return (
 			<>
 				<div className="header navbar-expand-lg ">
-					<a className="papertrade navbar-brand" href="">
+					<a className="papertrade navbar-brand" href="/">
 						PAPER TRADE
 					</a>
 					<a
