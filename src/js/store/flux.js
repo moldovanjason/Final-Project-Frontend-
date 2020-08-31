@@ -6,15 +6,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			portfolioValue: 5000,
 			buyingPower: 5000,
 			username: "Moldovanjason",
-			stocks: [
-				{
-					name: "apple",
-					symbol: "AAPL",
-					price: 500,
-					shares: 0,
-					currentValue: 1000
-				}
-			]
+			currentStocks: []
 		},
 		actions: {
 			createUser: (username, email, password) => {

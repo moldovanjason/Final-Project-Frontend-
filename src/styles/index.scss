@@ -137,3 +137,236 @@
   position: relative;
   left:144px;
 }
+
+
+.profilenavbar{
+    height:125px;
+    background-color:rgb(103, 130, 151);
+    display: flex;
+    justify-content: space-between;
+}
+
+.editprofile{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-top:20px;
+    //font-weight:lighter;
+}
+
+.logout{
+    color:rgb(240, 240, 240);
+    font-size: 40px;
+    margin-top:20px;
+    }
+
+.editform{
+    width:200px;
+    height:100px;
+    background:red;
+}
+
+.newemail{
+    width:200px;
+}
+
+.number{
+    position: relative;
+    left:10px;
+}
+
+.mystockstitle{
+    position: relative;
+    right:300px;
+}
+
+.tradestocksheader{
+    margin:0px;
+    background-color: rgb(90, 85, 74);
+}
+
+.transactionhistorytitle{
+    height:20px;
+}
+
+
+.navbar{
+    background-color:rgb(69, 74, 78);
+    height:30px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tradestocks{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:190px;
+    margin-right:40px;
+}
+
+.tradestocks:hover{
+    color:white;
+}
+
+.transactionhistory{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.transactionhistory:hover{
+    color:white;
+}
+
+.leaderboard{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.leaderboard:hover{
+    color:white;
+}
+
+.editprofilee{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.editprofilee:hover{
+    color:white;
+}
+
+.userprofile{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.userprofile:hover{
+    color:white;
+}
+
+.mystocks{
+    color:rgb(220, 220, 220);
+    font-size:20px;
+    margin-left:40px;
+    margin-right:40px;
+}
+
+.mystocks:hover{
+    color:white;
+}
+
+.h-view{
+    position:absolute;
+    right:0;
+    left: 0;
+    margin-right:auto;
+    margin-left:auto;
+    z-index: 100;
+    width: 600px;
+}
+
+.signupmodalheader{
+    background:rgb(152, 157, 161);
+}
+
+.usernamesignup{
+
+}
+
+.emailsignup{
+
+}
+
+.passwordsignup{
+
+}
+
+.signupmodalfooter{
+    background:rgb(152, 157, 161);
+}
+
+.signupmodal{
+    width:257px;
+    height:380px;
+    position: relative;
+    left:120px;
+}
+
+.createaccountbutton{
+    background:rgb(69, 74, 78);
+}
+
+.cancelbutton{
+    background:rgb(69, 74, 78);
+}
+
+.loader {
+  font-size: 10px;
+  margin: 50px auto;
+  text-indent: -9999em;
+  width: 11em;
+  height: 11em;
+  border-radius: 50%;
+  background: blue;
+  background: -moz-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: -webkit-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: -o-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: -ms-linear-gradient(left, blue 10%, rgba(255, 255, 255, 0) 42%);
+  background: linear-gradient(to right, blue 10%, rgba(255, 255, 255, 0) 42%);
+  position: relative;
+  -webkit-animation: load3 1.4s infinite linear;
+  animation: load3 1.4s infinite linear;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before {
+  width: 50%;
+  height: 50%;
+  background: blue;
+  border-radius: 100% 0 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+}
+.loader:after {
+  background: #0dc5c1;
+  width: 75%;
+  height: 75%;
+  border-radius: 50%;
+  content: '';
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+@-webkit-keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
