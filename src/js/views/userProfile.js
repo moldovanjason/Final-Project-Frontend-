@@ -42,10 +42,11 @@ export class UserProfile extends React.Component {
 		return (
 			<div>
 				<Header />
+				<div className="vluserProfile" />
 				<Navbar />
 				<form className="editform">
 					<div>
-						<label className="label">Username:</label>
+						<label className="label">*USERNAME HERE*</label>
 						{/* <input
 								onChange={event => {
 									this.setState({ ...this.state, fullName: event.target.value });
@@ -91,9 +92,9 @@ export class UserProfile extends React.Component {
 					>
 						save
 					</button>
-					<Link className="mt-3 w-100 text-center" to="/mystocks">
-						or go back to My Stocks
-					</Link>
+					<button className="mt-3 w-100 text-center" to="/mystocks">
+						back to My Stocks
+					</button>
 				</form>
 			</div>
 		);

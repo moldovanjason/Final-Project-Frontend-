@@ -2,7 +2,7 @@
 
 .header{
     height:110px;
-    background-color:rgb(69, 74, 78);
+    background-color:rgb(51, 44, 34);
     display: flex;
     justify-content: space-between;
 }
@@ -111,7 +111,14 @@
 }
 
 
-.vlhome {
+.vluserProfile {
+  border-left: 650px solid rgb(255, 255, 255);
+  height: 1px;
+  margin-top:0px;
+  border-radius:5px;
+}
+
+.hlhome {
   border-left: 1px solid rgb(69, 74, 78);
   height: 625px;
   margin-top:24px;
@@ -141,7 +148,7 @@
 
 .profilenavbar{
     height:125px;
-    background-color:rgb(103, 130, 151);
+    background-color:rgb(51, 44, 34);
     display: flex;
     justify-content: space-between;
 }
@@ -160,9 +167,13 @@
     }
 
 .editform{
-    width:200px;
     height:100px;
-    background:red;
+    // background:rgb(49, 42, 42);
+    // position: relative;
+    // left:600px;
+    font-size: 25px;
+    margin: auto;
+    width: 50%;
 }
 
 .newemail{
