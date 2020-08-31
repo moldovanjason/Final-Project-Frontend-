@@ -2,7 +2,7 @@
 
 .header{
     height:110px;
-    background-color:rgb(51, 44, 34);
+    background-color:#404040;
     display: flex;
     justify-content: space-between;
 }
@@ -148,7 +148,7 @@
 
 .profilenavbar{
     height:125px;
-    background-color:rgb(51, 44, 34);
+    background-color:#404040;
     display: flex;
     justify-content: space-between;
 }
@@ -187,7 +187,8 @@
 
 .mystockstitle{
     position: relative;
-    right:300px;
+    left:600px;
+    color:(71, 55, 47);
 }
 
 .tradestocksheader{
@@ -201,7 +202,7 @@
 
 
 .navbar{
-    background-color:rgb(69, 74, 78);
+    background-color:#404040;
     height:30px;
     display: flex;
     justify-content: space-evenly;
@@ -284,7 +285,11 @@
 }
 
 .signupmodalheader{
-    background:rgb(152, 157, 161);
+    background:#404040;
+    width:257px;
+    position: relative;
+    right:1px;
+    bottom:2px;
 }
 
 .usernamesignup{
@@ -300,7 +305,10 @@
 }
 
 .signupmodalfooter{
-    background:rgb(152, 157, 161);
+    background:#404040;
+    width:257px;
+    position: relative;
+    right:1px;
 }
 
 .signupmodal{

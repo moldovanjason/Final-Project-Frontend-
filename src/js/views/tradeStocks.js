@@ -21,10 +21,18 @@ export function TradeStocks(props) {
 						<table className="table table-striped">
 							<thead>
 								<tr>
-									<th scope="col">buy or sell</th>
-									<th scope="col">Symbol</th>
-									<th scope="col">Name</th>
-									<th scope="col">Price</th>
+									<th scope="col" className="">
+										buy or sell
+									</th>
+									<th scope="col" className="">
+										Symbol
+									</th>
+									<th scope="col" className="">
+										Name
+									</th>
+									<th scope="col" className="">
+										Price
+									</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -32,6 +40,9 @@ export function TradeStocks(props) {
 									return (
 										<tr key={index}>
 											<td>
+												{/* create onclick for each button too function properly  
+                                             create input field on the side of buttons to select amount of stocks a user can buy 
+                                            logic on backend for number of shares. logic would have to be created on the front end for total cost */}
 												<button>Buy</button>
 												<button>Sell</button>
 											</td>
