@@ -8,6 +8,7 @@ export function LeaderBoard(props) {
 	return (
 		<div>
 			<Header />
+			<div className="vluserProfile" />
 			<Navbar />
 			<table className="table table-striped">
 				<thead>

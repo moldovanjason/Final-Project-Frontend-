@@ -3,7 +3,7 @@ const URI = "https://3000-bbbf7b0d-e9c3-40ad-b7cc-c5e9d903fd06.ws-us02.gitpod.io
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			portfolioValue: 5000,
+			portfolioValue: 10000,
 			buyingPower: 5000,
 			username: "Moldovanjason",
 			currentStocks: []
