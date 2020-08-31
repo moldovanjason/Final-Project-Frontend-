@@ -5,7 +5,7 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { MyStocks } from "./views/myStocks";
 import { NoPageFound } from "./views/noPageFound";
-import { StockPage } from "./views/stockPage";
+import { TradeStocks } from "./views/tradeStocks";
 import { LeaderBoard } from "./views/leaderBoard";
 import injectContext from "./store/appContext";
 import { TransactionHistory } from "./views/transactionHistory";
@@ -28,7 +28,7 @@ const Layout = () => {
 						<Route exact path="/home" component={Home} />
 						<Route exact path="/userprofile" component={UserProfile} />
 						<Route exact path="/mystocks" component={MyStocks} />
-						<Route exact path="/stockpage" component={StockPage} />
+						<Route exact path="/tradestocks" component={TradeStocks} />
 						<Route exact path="/leaderboard" component={LeaderBoard} />
 						<Route exact path="/transactionhistory" component={TransactionHistory} />
 

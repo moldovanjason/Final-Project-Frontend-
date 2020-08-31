@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { StockPage } from "../views/stockPage";
+import { StockPage } from "../views/tradeStocks";
 import { PropTypes } from "prop-types";
 import { withRouter } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";

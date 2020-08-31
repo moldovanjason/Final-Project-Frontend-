@@ -44,8 +44,8 @@ export class UserProfile extends React.Component {
 				<Header />
 				<Navbar />
 				<form className="editform">
-					<div className="form-group">
-						<label>Username:</label>
+					<div>
+						<label className="label">Username:</label>
 						{/* <input
 								onChange={event => {
 									this.setState({ ...this.state, fullName: event.target.value });

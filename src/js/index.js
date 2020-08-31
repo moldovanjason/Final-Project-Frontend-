@@ -9,6 +9,12 @@ import "bootstrap/dist/css/bootstrap.css";
 
 import "../styles/navbar.scss";
 import "../styles/index.scss";
+import "../styles/../js/views/home";
+import "../styles/../js/views/leaderBoard";
+import "../styles/../js/views/myStocks";
+import "../styles/../js/views/tradeStocks";
+import "../styles/../js/views/transactionHistory";
+import "../styles/../js/views/userProfile";
 //import your own components
 import Layout from "./layout";
 

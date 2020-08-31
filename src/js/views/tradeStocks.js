@@ -4,7 +4,7 @@ import { Navbar } from "../component/navbar";
 import { Header } from "../component/header";
 
 //create your first component
-export function StockPage(props) {
+export function TradeStocks(props) {
 	const [stocks, setStocks] = useState([]);
 
 	useEffect(() => {
@@ -31,23 +31,22 @@ export function StockPage(props) {
 		<div>
 			<Header />
 			<Navbar />
-			<div className="text-center mt-5">
-				<table className="table table-striped">
-					<thead>
-						<tr>
-							<th scope="col">buy or sell</th>
-							<th scope="col">Symbol</th>
-							<th scope="col">Name</th>
-							<th scope="col">Price</th>
-						</tr>
-					</thead>
-					<tbody>{stockList}</tbody>
-				</table>
-			</div>
+			<h1 className="tradestocksheader text-center">Trade Stocks</h1>
+			<table className="table table-striped">
+				<thead>
+					<tr>
+						<th scope="col">buy or sell</th>
+						<th scope="col">Symbol</th>
+						<th scope="col">Name</th>
+						<th scope="col">Price</th>
+					</tr>
+				</thead>
+				<tbody>{stockList}</tbody>
+			</table>
 		</div>
 	);
 }
 
-StockPage.propTypes = {
+TradeStocks.propTypes = {
 	history: PropsTypes.object
 };

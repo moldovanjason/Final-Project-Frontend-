@@ -12,24 +12,25 @@ export function LeaderBoard(props) {
 			<table className="table table-striped">
 				<thead>
 					<tr>
-						<th scope="col">#</th>
+						<th scope="col">Rank</th>
 						<th scope="col">Username</th>
 						<th scope="col">+/- Profit</th>
-						<th scope="col">Handle</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td scope="row">1</td>
+						<td scope="row" className="number">
+							1
+						</td>
 						<td>Mark221</td>
 						<td>+ $204.60</td>
-						<td>@mdo</td>
 					</tr>
 					<tr>
-						<td scope="row">2</td>
+						<td scope="row" className="number">
+							2
+						</td>
 						<td>JacobT</td>
 						<td>- $20.62</td>
-						<td>@fat</td>
 					</tr>
 				</tbody>
 			</table>

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { StockPage } from "../views/stockPage";
+import { StockPage } from "../views/tradeStocks";
 import { PropTypes } from "prop-types";
 import { withRouter } from "react-router-dom";
 
@@ -11,10 +11,7 @@ export const Navbar = props => {
 			<div className="collapse navbar-collapse" id="navbarNav">
 				<ul className="navbartext navbar-nav">
 					<li className="nav-item">
-						<a
-							className="tradestocks nav-link"
-							href="/stockpage"
-							onClick={() => props.history.push("/stockpage")}>
+						<a className="tradestocks nav-link" href="/tradestocks">
 							Trade Stocks
 						</a>
 					</li>
