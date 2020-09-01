@@ -31,16 +31,14 @@
 }
 
 .editprofile{
-    color:rgb(220, 220, 220);
     font-size: 40px;
     margin-top:20px;
     position:relative;
     left:300px;
-    //font-weight:lighter;
 }
 
 .logout{
-    color:rgb(220, 220, 220);
+    color:rgb(218, 218, 218);
     font-size: 40px;
     margin-top:20px;
     position: relative;
@@ -74,8 +72,9 @@
     //margin-top:50px;
     // background:rgb(28, 65, 45);
     position: relative;
-    bottom: 00px;
+    bottom: -50px;
     left: 00px;
+    line-height: 2.4rem;
 }
 
 .middle{
@@ -118,7 +117,7 @@
   border-radius:5px;
 }
 
-.hlhome {
+.vlhome {
   border-left: 1px solid rgb(69, 74, 78);
   height: 625px;
   margin-top:24px;
@@ -189,11 +188,13 @@
     position: relative;
     left:600px;
     color:(71, 55, 47);
+    margin:0px;
 }
 
 .tradestocksheader{
     margin:0px;
-    background-color: rgb(90, 85, 74);
+    background-color: #404040;
+    color:rgb(220, 220, 220) ;
 }
 
 .transactionhistorytitle{
@@ -290,6 +291,7 @@
     position: relative;
     right:1px;
     bottom:2px;
+    color:rgb(220, 220, 220)
 }
 
 .usernamesignup{

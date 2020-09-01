@@ -22,10 +22,7 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=8d45cc9cb998a6d3f13da7b13700f503")
-				.then(res => res.json())
-				.then(data => setState({ ...state, store: { currentStocks: data } }))
-				.catch(err => alert(err.message));
+			state.actions.loadStockData();
 		}, []);
 
 		// The initial value for the context is not null anymore, but the current state of this component,
