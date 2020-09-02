@@ -12,6 +12,15 @@ export const Header = props => {
 			<a className="papertrade navbar-brand" href="/mystocks" onClick={() => props.history.push("/mystocks")}>
 				PAPER TRADE
 			</a>
+			<div className="usernameheader">
+				Username:
+				{/* {store.username} */}
+			</div>
+			<div className="portfoliovalueheader">Portfolio Value: {/*{store.portfolioValue}*/}</div>
+			<div className="buyingpowerheader">
+				Buying Power:
+				{/* {store.buyingPower} */}
+			</div>
 			<a className="logout nav-link" href="/home" onClick={() => props.history.push("/home")}>
 				Log Out
 			</a>
