@@ -387,16 +387,18 @@
 
 .table{
     color:#404040;
-    width:94%;
+    width:93%;
     margin:auto;
-    border:#404040 3px solid;
+    border:#404040 4px solid;
     border-radius: 5px;
-    
 }
 
-.rows{
-    color:#404040;
-    // border:#404040 1px solid;
+.aisle{
+    border:#404040 1px solid;
+}
+
+.headerpadding{
+    padding-left: 100px !important;
 }
 
 .back{
@@ -405,8 +407,11 @@
 }
 
 .rowheaders{
-    justify-content:center;
-    position:relative;
-    left:40px;
+    border-bottom:#404040 3px solid !important;
+}
 
+
+.wholetable{
+    margin: 15px;
+    margin-top:40px;
 }

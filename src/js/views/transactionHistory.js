@@ -9,7 +9,6 @@ export function TransactionHistory(props) {
 		<div className="transaction-table">
 			<Header />
 			<Navbar />
-			<h1 className="transactionhistorytitle">Transaction History </h1>
 			<table className="table table-striped">
 				<thead>
 					<tr>

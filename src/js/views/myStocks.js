@@ -24,31 +24,41 @@ export function MyStocks(props) {
 				Buying Power:
 				{store.buyingPower}
 			</div>
-			<div>
+			<div className="wholetable">
 				<table className="table">
 					<thead>
 						<tr className="rowheaders">
-							<th scope="col">Symbol</th>
-							<th scope="col">Name</th>
-							<th scope="col">Shares</th>
-							<th scope="col">Price</th>
-							<th scope="col">Total Return</th>
+							<th scope="col" className="headerpadding">
+								Symbol
+							</th>
+							<th scope="col" className="headerpadding">
+								Name
+							</th>
+							<th scope="col" className="headerpadding">
+								Shares
+							</th>
+							<th scope="col" className="headerpadding">
+								Price
+							</th>
+							<th scope="col" className="headerpadding">
+								Total Return
+							</th>
 						</tr>
 					</thead>
 					<tbody className="rows">
 						<tr>
-							<td>AAPL</td>
-							<td>Apple Inc</td>
-							<td>1</td>
-							<td>$500.04</td>
-							<td>$4.90</td>
+							<td className="aisle">AAPL</td>
+							<td className="aisle">Apple Inc</td>
+							<td className="aisle">1</td>
+							<td className="aisle">$500.04</td>
+							<td className="aisle">$4.90</td>
 						</tr>
 						<tr>
-							<td>GOOGL</td>
-							<td>Alphabet Inc</td>
-							<td>1</td>
-							<td>$1628.52</td>
-							<td>-$0.36</td>
+							<td className="aisle">GOOGL</td>
+							<td className="aisle">Alphabet Inc</td>
+							<td className="aisle">1</td>
+							<td className="aisle">$1628.52</td>
+							<td className="aisle">-$0.36</td>
 						</tr>
 					</tbody>
 				</table>
