@@ -94,8 +94,8 @@
 
 
 .loginbutton{
-    background:rgb(69, 74, 78);
-    color:rgb(240, 240, 240);
+    background:#404040;
+    color:rgb(221, 221, 221);
 }
 
 .loginbutton:hover{
@@ -118,7 +118,7 @@
 }
 
 .vlhome {
-  border-left: 1px solid rgb(69, 74, 78);
+  border-left: 1px solid #404040;
   height: 625px;
   margin-top:24px;
   border-radius:5px;
@@ -128,7 +128,7 @@
     width:100%;
     border-radius:0px;
     border:none;
-    border-bottom:1px solid rgb(69, 74, 78);
+    border-bottom:1px solid #404040;
 }
 
 .input:focus{
@@ -182,13 +182,6 @@
 .number{
     position: relative;
     left:10px;
-}
-
-.mystockstitle{
-    position: relative;
-    left:600px;
-    color:(71, 55, 47);
-    margin:0px;
 }
 
 .tradestocksheader{
@@ -390,4 +383,30 @@
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+}
+
+.table{
+    color:#404040;
+    width:94%;
+    margin:auto;
+    border:#404040 3px solid;
+    border-radius: 5px;
+    
+}
+
+.rows{
+    color:#404040;
+    // border:#404040 1px solid;
+}
+
+.back{
+    width:30px;
+    height:40px;
+}
+
+.rowheaders{
+    justify-content:center;
+    position:relative;
+    left:40px;
+
 }

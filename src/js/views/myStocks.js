@@ -24,11 +24,10 @@ export function MyStocks(props) {
 				Buying Power:
 				{store.buyingPower}
 			</div>
-			<h1 className="mystockstitle">MY STOCKS </h1>
 			<div>
-				<table className="table table-striped">
+				<table className="table">
 					<thead>
-						<tr>
+						<tr className="rowheaders">
 							<th scope="col">Symbol</th>
 							<th scope="col">Name</th>
 							<th scope="col">Shares</th>
@@ -36,7 +35,7 @@ export function MyStocks(props) {
 							<th scope="col">Total Return</th>
 						</tr>
 					</thead>
-					<tbody>
+					<tbody className="rows">
 						<tr>
 							<td>AAPL</td>
 							<td>Apple Inc</td>

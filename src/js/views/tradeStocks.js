@@ -22,7 +22,7 @@ export function TradeStocks(props) {
 							<thead>
 								<tr>
 									<th scope="col" className="">
-										buy or sell
+										Buy
 									</th>
 									<th scope="col" className="">
 										Symbol

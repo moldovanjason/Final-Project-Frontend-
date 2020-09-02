@@ -14,29 +14,29 @@ export class UserProfile extends React.Component {
 		};
 	}
 
-	// editContact = (name, email, id) => {
-	// 			fetch(`address`, {
-	// 				method: "PUT",
-	// 				headers: {
-	// 					"Content-Type": "application/json"
-	// 				},
-	// 				body: JSON.stringify({
-	// 					agenda_slug: "expAgendaForCohortIII",
-	// 					full_name: name,
-	// 					email
-	// 				})
-	// 			})
-	// 				.then(data => data.json())
-	// 				.then(({ status, resMsg }) => {
-	// 					if (status === 400) alert(resMsg);
-	// 				})
-	// 				.then(() => {
-	// 					fetch("address")
-	// 						.then(res => res.json())
-	// 						.then(data => setStore({ allContacts: data }));
-	// 				})
-	// 				.catch(err => alert(err.message));
-	// 		}
+	editContact = (name, email, id) => {
+		fetch(`address`, {
+			method: "PUT",
+			headers: {
+				"Content-Type": "application/json"
+			},
+			body: JSON.stringify({
+				agenda_slug: "expAgendaForCohortIII",
+				full_name: name,
+				email
+			})
+		})
+			.then(data => data.json())
+			.then(({ status, resMsg }) => {
+				if (status === 400) alert(resMsg);
+			})
+			.then(() => {
+				fetch("address")
+					.then(res => res.json())
+					.then(data => setStore({ allContacts: data }));
+			})
+			.catch(err => alert(err.message));
+	};
 
 	render() {
 		return (
@@ -92,7 +92,7 @@ export class UserProfile extends React.Component {
 					>
 						save
 					</button>
-					<button className="mt-3 w-100 text-center" to="/mystocks">
+					<button className="back mt-3 w-100 text-center" to="/mystocks">
 						back to My Stocks
 					</button>
 				</form>
