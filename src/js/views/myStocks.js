@@ -16,8 +16,8 @@ export function MyStocks(props) {
 				Username:
 				{store.username}
 			</div>
-			<div>Portfolio Value: {store.portfolioValue}</div>
-			<div>
+			<div className="portfoliovaluemystocks">Portfolio Value: {store.portfolioValue}</div>
+			<div className="buyingpowermystocks">
 				Buying Power:
 				{store.buyingPower}
 			</div>

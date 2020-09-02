@@ -429,9 +429,13 @@
 }
 
 .editprofileuserprofile{
-    width:20%;
+    width:25%;
     margin:auto;
-    margin-top:36px;
+    margin-top:35px;
+    margin-left:240px;
+    font-weight: bold;
+    color:#404040;
+
 }
 
 .userprofilepassword{
@@ -446,4 +450,25 @@
     border-radius:0px;
     border:none;
     border-bottom:1px solid #404040;
+}
+
+.username{
+    position: relative;
+    left:43%;
+    font-weight: bold;
+    font-size:25px;
+}
+
+.portfoliovaluemystocks{
+    position: relative;
+    left:39%;
+    font-weight: bold;
+    font-size:25px;
+}
+
+.buyingpowermystocks{
+    position: relative;
+    left:39%;
+    font-weight: bold;
+    font-size:25px;
 }
