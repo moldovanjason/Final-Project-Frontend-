@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import { Navbar } from "../component/navbar";
 import { Context } from "../store/appContext";
@@ -8,6 +8,26 @@ import { Header } from "../component/header";
 //create your first component
 export function MyStocks(props) {
 	const { store, actions } = useContext(Context);
+	const [portfolio, setPortfolio] = useState([]);
+	useEffect(() => {
+		fetch("https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io/portfolio/2")
+			.then(response => response.json())
+			.then(data => setPortfolio(data));
+		// create another fetch to compare with data from user
+	}, []);
+
+	const listOfStocks = portfolio.map((stock, index) => {
+		return (
+			<tr className="tablerow" key={index}>
+				<td className="aisle">{stock.symbol}</td>
+				<td className="aisle">{stock.companyName}</td>
+				<td className="aisle">{stock.shares}</td>
+				<td className="aisle">{stock.price}</td>
+				<td className="aisle">5</td>
+			</tr>
+		);
+	});
+
 	return (
 		<div>
 			<Header />
@@ -16,8 +36,8 @@ export function MyStocks(props) {
 				Username:
 				{store.username}
 			</div>
-			<div className="portfoliovaluemystocks">Portfolio Value: {store.portfolioValue}</div>
-			<div className="buyingpowermystocks">
+			<div>Portfolio Value: {store.portfolioValue}</div>
+			<div>
 				Buying Power:
 				{store.buyingPower}
 			</div>
@@ -38,26 +58,11 @@ export function MyStocks(props) {
 								Price
 							</th>
 							<th scope="col" className="headerpadding">
-								Total Return
+								Profit/Loss
 							</th>
 						</tr>
 					</thead>
-					<tbody className="rows">
-						<tr className="tablerow">
-							<td className="aisle">AAPL</td>
-							<td className="aisle">Apple Inc</td>
-							<td className="aisle">1</td>
-							<td className="aisle">$500.04</td>
-							<td className="aisle">$4.90</td>
-						</tr>
-						<tr className="tablerow">
-							<td className="aisle">GOOGL</td>
-							<td className="aisle">Alphabet Inc</td>
-							<td className="aisle">1</td>
-							<td className="aisle">$1628.52</td>
-							<td className="aisle">-$0.36</td>
-						</tr>
-					</tbody>
+					<tbody className="rows">{listOfStocks}</tbody>
 				</table>
 			</div>
 		</div>
