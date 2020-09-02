@@ -42,11 +42,10 @@ export class UserProfile extends React.Component {
 		return (
 			<div>
 				<Header />
-				<div className="vluserProfile" />
 				<Navbar />
 				<form className="editform">
 					<div>
-						<label className="label">*USERNAME HERE*</label>
+						<label className="label userprofilepadding">*USERNAME HERE*</label>
 						{/* <input
 								onChange={event => {
 									this.setState({ ...this.state, fullName: event.target.value });
@@ -57,7 +56,7 @@ export class UserProfile extends React.Component {
 								value={this.state.full_name}
 							/> */}
 					</div>
-					<div className="form-group">
+					<div className="form-group userprofilepadding">
 						<label>Email</label>
 						<input
 							onChange={event => {
@@ -69,7 +68,7 @@ export class UserProfile extends React.Component {
 							value={this.state.email}
 						/>
 					</div>
-					<div className="form-group">
+					<div className="form-group userprofilepadding">
 						<label>Password</label>
 						<input
 							onChange={event => {
@@ -92,7 +91,7 @@ export class UserProfile extends React.Component {
 					>
 						save
 					</button>
-					<button className="back mt-3 w-100 text-center" to="/mystocks">
+					<button className="back text-center" to="/mystocks">
 						back to My Stocks
 					</button>
 				</form>

@@ -166,13 +166,12 @@
     }
 
 .editform{
-    height:100px;
-    // background:rgb(49, 42, 42);
-    // position: relative;
-    // left:600px;
+    height:450px;
     font-size: 25px;
     margin: auto;
-    width: 50%;
+    width: 60%;
+    border:#404040 3px solid;
+    margin-top:10px;
 }
 
 .newemail{
@@ -402,8 +401,13 @@
 }
 
 .back{
-    width:30px;
-    height:40px;
+    width:230px;
+    height:43px;
+    background-color: #404040 ;
+    color:white;
+    margin:25px;
+    border-radius: 5px;
+
 }
 
 .rowheaders{
@@ -414,4 +418,9 @@
 .wholetable{
     margin: 15px;
     margin-top:40px;
+}
+
+.userprofilepadding{
+    padding:15px;
+    margin-left:200px;
 }
