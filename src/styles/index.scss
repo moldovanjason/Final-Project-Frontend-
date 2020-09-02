@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
 .header{
-    height:110px;
+    height:120px;
     background-color:#404040;
     display: flex;
     justify-content: space-between;
@@ -40,9 +40,9 @@
 .logout{
     color:rgb(218, 218, 218);
     font-size: 40px;
-    margin-top:20px;
     position: relative;
-    right:220px;
+    top:10px;
+    right:188px;
     }
 
 .logout:hover{
@@ -187,11 +187,6 @@
     color:rgb(220, 220, 220) ;
 }
 
-.transactionhistorytitle{
-    height:20px;
-}
-
-
 .navbar{
     background-color:#404040;
     height:40px;
@@ -202,7 +197,7 @@
 .tradestocks{
     color:rgb(220, 220, 220);
     font-size:20px;
-    margin-left:190px;
+    margin-left:200px;
     margin-right:40px;
 }
 
@@ -213,7 +208,7 @@
 .transactionhistory{
     color:rgb(220, 220, 220);
     font-size:20px;
-    margin-left:40px;
+    margin-left:25px;
     margin-right:40px;
 }
 
@@ -224,7 +219,7 @@
 .leaderboard{
     color:rgb(220, 220, 220);
     font-size:20px;
-    margin-left:40px;
+    margin-left:25px;
     margin-right:40px;
 }
 
@@ -246,8 +241,8 @@
 .userprofile{
     color:rgb(220, 220, 220);
     font-size:20px;
-    margin-left:40px;
-    margin-right:40px;
+    margin-left:25px;
+    margin-right:50px;
 }
 
 .userprofile:hover{
@@ -257,7 +252,7 @@
 .mystocks{
     color:rgb(220, 220, 220);
     font-size:20px;
-    margin-left:40px;
+    margin-left:25px;
     margin-right:40px;
 }
 
@@ -477,23 +472,36 @@
     color:white;
     height:22px;
     position: relative;
-    left:620px;
-    margin-top:10px;
+    left:625px;
+    top:38px;
 }
 
 .portfoliovalueheader{
     color: white;
     height:22px;
     position: relative;
-    left:420px;
-    top:50px;
+    left:475px;
+    top:80px;
     
 }
 
 .buyingpowerheader{
     color:white;
     height:22px;
-    left:250px;
+    position: relative;
+    left:243px;
+    top:58px;
 
     // top:25px;
 }
+
+.vlheader{
+  border-left: 1px solid #ffffff;
+  height: 80px;
+  margin:0px;
+  margin-top:24px;
+  border-radius:5px;
+  position: relative;
+  right:245px;
+  top:10px;
+  }

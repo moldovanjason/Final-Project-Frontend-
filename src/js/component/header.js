@@ -13,17 +13,18 @@ export const Header = props => {
 				PAPER TRADE
 			</a>
 			<div className="usernameheader">
-				Username:
+				*username*
 				{/* {store.username} */}
 			</div>
-			<div className="portfoliovalueheader">Portfolio Value: {/*{store.portfolioValue}*/}</div>
+			<div className="portfoliovalueheader">Portfolio Value:$10,000 {/*{store.portfolioValue}*/}</div>
 			<div className="buyingpowerheader">
-				Buying Power:
+				Buying Power:$10,000
 				{/* {store.buyingPower} */}
 			</div>
 			<a className="logout nav-link" href="/home" onClick={() => props.history.push("/home")}>
 				Log Out
 			</a>
+			<div className="vlheader" />
 		</div>
 	);
 };
