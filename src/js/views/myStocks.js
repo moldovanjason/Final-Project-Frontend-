@@ -16,11 +16,8 @@ export function MyStocks(props) {
 				Username:
 				{store.username}
 			</div>
-			<div className="portfoliovalue">
-				Portfolio Value:
-				{store.portfolioValue}
-			</div>
-			<div className="buyingpower">
+			<div>Portfolio Value: {store.portfolioValue}</div>
+			<div>
 				Buying Power:
 				{store.buyingPower}
 			</div>
@@ -46,14 +43,14 @@ export function MyStocks(props) {
 						</tr>
 					</thead>
 					<tbody className="rows">
-						<tr>
+						<tr className="tablerow">
 							<td className="aisle">AAPL</td>
 							<td className="aisle">Apple Inc</td>
 							<td className="aisle">1</td>
 							<td className="aisle">$500.04</td>
 							<td className="aisle">$4.90</td>
 						</tr>
-						<tr>
+						<tr className="tablerow">
 							<td className="aisle">GOOGL</td>
 							<td className="aisle">Alphabet Inc</td>
 							<td className="aisle">1</td>

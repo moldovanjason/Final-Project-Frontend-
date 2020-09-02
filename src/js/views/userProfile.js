@@ -45,6 +45,7 @@ export class UserProfile extends React.Component {
 				<Navbar />
 				<form className="editform">
 					<div>
+						<div className="editprofileuserprofile">Edit Profile</div>
 						<label className="label userprofilepadding">*USERNAME HERE*</label>
 						{/* <input
 								onChange={event => {
@@ -57,7 +58,7 @@ export class UserProfile extends React.Component {
 							/> */}
 					</div>
 					<div className="form-group userprofilepadding">
-						<label>Email</label>
+						<label />
 						<input
 							onChange={event => {
 								this.setState({ ...this.state, email: event.target.value });
@@ -69,19 +70,23 @@ export class UserProfile extends React.Component {
 						/>
 					</div>
 					<div className="form-group userprofilepadding">
-						<label>Password</label>
+						<label />
 						<input
 							onChange={event => {
 								this.setState({ ...this.state, password: event.target.value });
 							}}
 							type="password"
-							className="form-control"
+							className="userprofilepassword form-control"
 							placeholder="Enter New Password"
 							value={this.state.password}
 						/>
 					</div>
+					<button className="backtostocksbutton text-center" to="/mystocks">
+						My Stocks
+					</button>
 					<button
 						// disabled={disabledButton}
+						className="savebutton"
 						onClick={() => {
 							this.editContact(this.state.fullName, this.state.email, this.props.match.params.id);
 							props.history.push("/userprofile");
@@ -90,9 +95,6 @@ export class UserProfile extends React.Component {
 						// className={`btn ${disabledButton ? "btn-secondary" : "btn-primary"} form-control`}
 					>
 						save
-					</button>
-					<button className="back text-center" to="/mystocks">
-						back to My Stocks
 					</button>
 				</form>
 			</div>

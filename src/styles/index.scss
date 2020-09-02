@@ -166,17 +166,15 @@
     }
 
 .editform{
-    height:450px;
+    height:400px;
     font-size: 25px;
     margin: auto;
-    width: 60%;
+    width: 42%;
     border:#404040 3px solid;
     margin-top:10px;
+    border-radius: 50px;
 }
 
-.newemail{
-    width:200px;
-}
 
 .number{
     position: relative;
@@ -196,7 +194,7 @@
 
 .navbar{
     background-color:#404040;
-    height:30px;
+    height:40px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -284,18 +282,6 @@
     right:1px;
     bottom:2px;
     color:rgb(220, 220, 220)
-}
-
-.usernamesignup{
-
-}
-
-.emailsignup{
-
-}
-
-.passwordsignup{
-
 }
 
 .signupmodalfooter{
@@ -396,17 +382,23 @@
     border:#404040 1px solid;
 }
 
+.tablerow:hover{
+    background:#d5d5d5;
+}
+
 .headerpadding{
     padding-left: 100px !important;
 }
 
-.back{
-    width:230px;
+.backtostocksbutton{
+    width:150px;
     height:43px;
     background-color: #404040 ;
     color:white;
-    margin:25px;
+    margin:20px;
     border-radius: 5px;
+    text-shadow:1px 1px 7px #404040;
+    margin-left:27%;
 
 }
 
@@ -421,6 +413,37 @@
 }
 
 .userprofilepadding{
-    padding:15px;
+    // padding:15px;
     margin-left:200px;
+    margin-bottom:0px;
+}
+
+.savebutton{
+    width:100px;
+    height:43px;
+    background-color: #404040 ;
+    color:white;
+    margin:25px;
+    border-radius: 5px;
+    text-shadow:1px 1px 7px #404040;
+}
+
+.editprofileuserprofile{
+    width:20%;
+    margin:auto;
+    margin-top:36px;
+}
+
+.userprofilepassword{
+    width:50%;
+    border-radius:0px;
+    border:none;
+    border-bottom:1px solid #404040;
+}
+
+.newemail{
+    width:50%;
+    border-radius:0px;
+    border:none;
+    border-bottom:1px solid #404040;
 }
