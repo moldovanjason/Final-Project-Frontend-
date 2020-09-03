@@ -10,7 +10,7 @@ export function MyStocks(props) {
 	const { store, actions } = useContext(Context);
 	const [portfolio, setPortfolio] = useState([]);
 	useEffect(() => {
-		fetch("https://3000-ee414221-0bf8-4693-a1c5-671ebb7df98e.ws-us02.gitpod.io/portfolio/2")
+		fetch("https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io/portfolio/2")
 			.then(response => response.json())
 			.then(data => setPortfolio(data));
 		// create another fetch to compare with data from user
@@ -21,9 +21,10 @@ export function MyStocks(props) {
 	// we use store.currentStocks.price to calculate current value (stock.shares * store.currentStocks.price)
 
 	const currentPrice = symbol => {
-		let stock = store.currentStocks.filter(stock => symbol == stock.symbol);
-		console.log(stock);
-		return stock[0].price;
+		if (store.currentStocks) {
+			let stock = store.currentStocks.filter(stock => symbol == stock.symbol);
+			if (stock.length) return stock[0].price;
+		} else return 0;
 	};
 
 	store.currentStocks;
@@ -36,7 +37,7 @@ export function MyStocks(props) {
 						onClick={() => {
 							actions.sellStock(1, stock.symbol, stock.name, stock.price, shares, 5.67);
 						}}>
-						Buy
+						Sell
 					</button>
 					<input
 						onChange={event => {
@@ -50,36 +51,35 @@ export function MyStocks(props) {
 						// placeholder="Email or Username"
 					/>
 				</td>
-				<td className="aisle">{stock.id}</td>
 				<td className="aisle">{stock.symbol}</td>
 				<td className="aisle">{stock.companyName}</td>
 				<td className="aisle">{stock.shares}</td>
 				<td className="aisle">{stock.price}</td>
-				<td className="aisle">{currentPrice("SPY")}</td>
-				<td className="aisle">{stock.shares * stock.price}</td>
-				<td className="aisle">5</td>
+				<td className="aisle">{currentPrice(stock.symbol)}</td>
+				<td className="aisle">{stock.shares * currentPrice(stock.symbol)}</td>
+				<td className="aisle">{currentPrice(stock.symbol) - stock.price}</td>
 			</tr>
 		);
 	});
 
 	return (
-		<div>
-			<Header />
-			<Navbar {...props} />
+		<div className="container">
+			<div>
+				<Header />
+				<Navbar {...props} />
+			</div>
 			<div className="username">
 				My Stocks
 				{store.username}
 			</div>
-			<div className="wholetable">
+			<div>
 				<table className="table">
 					<thead>
 						<tr className="rowheaders">
 							<th scope="col" className="headerpadding">
 								Sell
 							</th>
-							<th scope="col" className="headerpadding">
-								#
-							</th>
+
 							<th scope="col" className="headerpadding">
 								Symbol
 							</th>
