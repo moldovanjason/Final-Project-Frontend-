@@ -1,4 +1,4 @@
-const URI = "https://3000-d84e4a87-770f-4ec6-9626-3f233bb5cb0e.ws-us02.gitpod.io";
+const URI = "https://3000-ee414221-0bf8-4693-a1c5-671ebb7df98e.ws-us02.gitpod.io/";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -51,11 +51,28 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 
+			sellStock: (userId, symbol, companyName, price, shares, totalReturn) => {
+				fetch(URI + "/portfolio/" + userId, {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						symbol: symbol,
+						companyName: companyName,
+						price: price,
+						shares: shares,
+						totalReturn: totalReturn
+					})
+				})
+					.then(data => data.json())
+					.then(response => console.log(response))
+					.catch(error => console.log(error));
+			},
+
 			loadStockData: () => {
 				const store = getStore();
 				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=b751728eddf21f5e078558c72694cdf2")
 					.then(res => res.json())
-					.then(data => setStore({ ...store, currentStocks: data }))
+					.then(data => setStore({ ...store, currentStocks: data.slice(0, 20) }))
 					.catch(err => alert(err.message));
 			},
 			// signInUser: () => {

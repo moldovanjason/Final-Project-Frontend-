@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { StockPage } from "../views/tradeStocks";
 import { PropTypes } from "prop-types";
@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";
 
 export const Header = props => {
+	// const [shares, setShares] = useState(0);
 	// console.log(props);
 	return (
 		<div className="header navbar-expand-lg ">
@@ -14,7 +15,7 @@ export const Header = props => {
 			</a>
 			<div className="usernameheader">
 				*username*
-				{/* {store.username} */}
+				{/*store.user.username*/}
 			</div>
 			<div className="portfoliovalueheader">Portfolio Value:$10,000 {/*{store.portfolioValue}*/}</div>
 			<div className="buyingpowerheader">

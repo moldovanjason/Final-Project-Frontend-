@@ -2,24 +2,24 @@
 
 .header{
     height:120px;
-    background-color:#404040;
+    background-color:#4ea7db;
     display: flex;
     justify-content: space-between;
 }
 
 .papertrade{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size: 70px;
     font-weight: bold;
     margin-left:55px;
 }
 
 .papertrade:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .signup{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size: 40px;
     margin-right:40px;
     margin-top:20px;
@@ -27,7 +27,7 @@
 }
 
 .signup:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .editprofile{
@@ -38,7 +38,7 @@
 }
 
 .logout{
-    color:rgb(218, 218, 218);
+    color:rgb(255, 255, 255);
     font-size: 40px;
     position: relative;
     top:10px;
@@ -46,12 +46,12 @@
     }
 
 .logout:hover{
-    color:rgb(255, 255, 255);
+    color:rgb(221, 221, 221);
     }
 
 
 .login{
-    color:white;
+    color:rgb(108, 206, 88);
     height:665px;
     width:50%;
     padding:70px;
@@ -94,12 +94,19 @@
 
 
 .loginbutton{
-    background:#404040;
-    color:rgb(221, 221, 221);
+    background:#42b833;
+    color:rgb(255, 255, 255);
+    width:100px;
+    height:43px;
+    font-size:22px;
+    border-radius: 5px;
+    text-shadow:1px 1px 7px #404040;
+    border:0px;
+    position:relative;
 }
 
 .loginbutton:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .nf{
@@ -147,7 +154,7 @@
 
 .profilenavbar{
     height:125px;
-    background-color:#404040;
+    background-color:#3b89b6;
     display: flex;
     justify-content: space-between;
 }
@@ -188,43 +195,43 @@
 }
 
 .navbar{
-    background-color:#404040;
+    background-color:#4ea7db;
     height:40px;
     display: flex;
     justify-content: space-evenly;
 }
 
 .tradestocks{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size:20px;
     margin-left:200px;
     margin-right:40px;
 }
 
 .tradestocks:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .transactionhistory{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size:20px;
     margin-left:25px;
     margin-right:40px;
 }
 
 .transactionhistory:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .leaderboard{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size:20px;
     margin-left:25px;
     margin-right:40px;
 }
 
 .leaderboard:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .editprofilee{
@@ -239,25 +246,25 @@
 }
 
 .userprofile{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size:20px;
     margin-left:25px;
     margin-right:50px;
 }
 
 .userprofile:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .mystocks{
-    color:rgb(220, 220, 220);
+    color:rgb(255, 255, 255);
     font-size:20px;
     margin-left:25px;
     margin-right:40px;
 }
 
 .mystocks:hover{
-    color:white;
+    color:rgb(221, 221, 221);
 }
 
 .h-view{
@@ -385,15 +392,16 @@
     padding-left: 100px !important;
 }
 
-.backtostocksbutton{
-    width:150px;
+.cancelbutton{
+    width:110px;
     height:43px;
-    background-color: #404040 ;
+    background-color: rgb(230, 44, 44) ;
     color:white;
     margin:20px;
     border-radius: 5px;
     text-shadow:1px 1px 7px #404040;
-    margin-left:27%;
+    margin-left:31%;
+    border:0px;
 
 }
 
@@ -416,11 +424,13 @@
 .savebutton{
     width:100px;
     height:43px;
-    background-color: #404040 ;
+    background-color: rgb(108, 206, 88) ;
     color:white;
     margin:25px;
     border-radius: 5px;
     text-shadow:1px 1px 7px #404040;
+    border:0px;
+    margin-left:8px;
 }
 
 .editprofileuserprofile{
@@ -438,6 +448,10 @@
     border-radius:0px;
     border:none;
     border-bottom:1px solid #404040;
+}
+
+.userprofilepassword:focus{
+    outline: none;
 }
 
 .newemail{

@@ -81,8 +81,8 @@ export class UserProfile extends React.Component {
 							value={this.state.password}
 						/>
 					</div>
-					<button className="backtostocksbutton text-center" to="/mystocks">
-						My Stocks
+					<button className="cancelbutton text-center" to="/mystocks">
+						Cancel
 					</button>
 					<button
 						// disabled={disabledButton}
@@ -94,7 +94,7 @@ export class UserProfile extends React.Component {
 						type="button"
 						// className={`btn ${disabledButton ? "btn-secondary" : "btn-primary"} form-control`}
 					>
-						save
+						Save
 					</button>
 				</form>
 			</div>
