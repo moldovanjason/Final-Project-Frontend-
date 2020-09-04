@@ -82,7 +82,10 @@ export class UserProfile extends React.Component {
 							value={this.state.password}
 						/>
 					</div>
-					<button className="cancelbutton text-center" to="/mystocks">
+					<button
+						className="cancelbutton text-center"
+						href="/mystocks"
+						onClick={() => this.props.history.push("/myStocks")}>
 						Cancel
 					</button>
 					<button
@@ -90,7 +93,7 @@ export class UserProfile extends React.Component {
 						className="savebutton"
 						onClick={() => {
 							this.editContact(this.state.fullName, this.state.email, this.props.match.params.id);
-							props.history.push("/userprofile");
+							this.props.history.push("/userprofile");
 						}}
 						type="button"
 						// className={`btn ${disabledButton ? "btn-secondary" : "btn-primary"} form-control`}

@@ -15,7 +15,7 @@ export function TransactionHistory(props) {
 			.then(data => setTransactions(data.Transactions));
 		// create another fetch to compare with data from user
 	}, []);
-	console.log(transactions, 99);
+
 	const listOfStocks = transactions.map((transaction, index) => {
 		return (
 			<tr className="tablerow" key={index}>

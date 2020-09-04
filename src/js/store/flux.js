@@ -3,8 +3,8 @@ const URI = "https://3000-dc5b60a1-e9c7-47df-8afe-d76da2d221f2.ws-us02.gitpod.io
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			portfolioValue: 10000,
-			buyingPower: 5000,
+			portfolioValue: 50000,
+			buyingPower: 50000,
 			user: {
 				userId: 1,
 				username: "Moldovanjason",
@@ -48,8 +48,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 					.then(data => data.json())
-					.then(response => console.log(response))
-					.catch(error => console.log(error));
+					.then(response => alert("Thank you for your puchase!"))
+
+					.catch(error => error);
 			},
 
 			sellStock: (userId, symbol, price, shares) => {
@@ -63,8 +64,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 					.then(data => data.json())
-					.then(response => console.log(response))
-					.catch(error => console.log(error));
+					.then(response => response)
+					.catch(error => error);
 			},
 
 			loadStockData: () => {

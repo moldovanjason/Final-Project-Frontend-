@@ -27,7 +27,7 @@ export function MyStocks(props) {
 			if (stock.length) return stock[0].price;
 		} else return 0;
 	};
-
+	console.log(portfolio);
 	const listOfStocks = portfolio.map((stock, index) => {
 		return (
 			<tr className="tablerow" key={index}>

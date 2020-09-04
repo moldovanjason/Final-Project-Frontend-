@@ -60,8 +60,7 @@ export function TradeStocks(props) {
 											}}
 											// value={shares}
 											className="input"
-											type="email"
-											id="exampleInputEmail1"
+											type="text"
 											aria-describedby="emailHelp"
 											// placeholder="Email or Username"
 										/>
