@@ -16,30 +16,30 @@ export function TradeStocks(props) {
 			<Header />
 			<div className="mystockstitle">Trade Stocks</div>
 			<Navbar />
-			<table className="table table-striped">
-				<thead>
-					<tr>
-						<th scope="col" className="">
-							Buy
-						</th>
-						<th scope="col" className="">
-							Symbol
-						</th>
-						<th scope="col" className="">
-							Name
-						</th>
-						<th scope="col" className="">
-							Price
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					{store.currentStocks.length < 1 ? (
-						<div> Stock data is loading... </div>
-					) : (
-						store.currentStocks.map((stock, index) => {
-							return (
-								<tr className="" key={index}>
+			{store.currentStocks.length < 1 ? (
+				<div> Stock data is loading... </div>
+			) : (
+				store.currentStocks.map((stock, index) => {
+					return (
+						<table className="table table-striped" key={index}>
+							<thead>
+								<tr>
+									<th scope="col" className="">
+										Buy
+									</th>
+									<th scope="col" className="">
+										Symbol
+									</th>
+									<th scope="col" className="">
+										Name
+									</th>
+									<th scope="col" className="">
+										Price
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr className="">
 									<td>
 										<button
 											onClick={() => {
@@ -56,7 +56,7 @@ export function TradeStocks(props) {
 										</button>
 										<input
 											onChange={event => {
-												setShares(event.target.value);
+												setShares(parseFloat(event.target.value));
 											}}
 											// value={shares}
 											className="input"
@@ -70,11 +70,11 @@ export function TradeStocks(props) {
 									<td>{stock.name}</td>
 									<td>{stock.price}</td>
 								</tr>
-							);
-						})
-					)}
-				</tbody>
-			</table>
+							</tbody>
+						</table>
+					);
+				})
+			)}
 		</div>
 	);
 }

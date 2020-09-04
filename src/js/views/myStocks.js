@@ -8,9 +8,10 @@ import { Header } from "../component/header";
 //create your first component
 export function MyStocks(props) {
 	const { store, actions } = useContext(Context);
+	const [shares, setShares] = useState(0);
 	const [portfolio, setPortfolio] = useState([]);
 	useEffect(() => {
-		fetch("https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io/portfolio/2")
+		fetch("https://3000-dc5b60a1-e9c7-47df-8afe-d76da2d221f2.ws-us02.gitpod.io/portfolio/1")
 			.then(response => response.json())
 			.then(data => setPortfolio(data));
 		// create another fetch to compare with data from user
@@ -27,15 +28,13 @@ export function MyStocks(props) {
 		} else return 0;
 	};
 
-	store.currentStocks;
-
 	const listOfStocks = portfolio.map((stock, index) => {
 		return (
 			<tr className="tablerow" key={index}>
 				<td>
 					<button
 						onClick={() => {
-							actions.sellStock(1, stock.symbol, stock.name, stock.price, shares, 5.67);
+							actions.sellStock(1, stock.symbol, stock.price, shares);
 						}}>
 						Sell
 					</button>
@@ -71,6 +70,7 @@ export function MyStocks(props) {
 			</div>
 			{/* <div className="mystockstitle">My Stocks</div> */}
 			<div>
+				{/* <button onClick={() => actions.loadStockData()}>Get Data</button> */}
 				<table className="table">
 					<thead>
 						<tr className="rowheaders">

@@ -1,4 +1,4 @@
-const URI = "https://3000-ee414221-0bf8-4693-a1c5-671ebb7df98e.ws-us02.gitpod.io/";
+const URI = "https://3000-dc5b60a1-e9c7-47df-8afe-d76da2d221f2.ws-us02.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -24,7 +24,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					body: JSON.stringify({
 						username: username,
 						email: email,
-						password: password
+						password: password,
+						buying_power: 50000.0
 					})
 				})
 					.then(data => data.json().then(response => ({ status: data.status, resMsg: response.msg })))
@@ -35,7 +36,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 
 			buyStock: (userId, symbol, companyName, price, shares, totalReturn) => {
-				fetch(URI + "/portfolio/" + userId, {
+				fetch(URI + "/portfolio/1", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
@@ -51,16 +52,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => console.log(error));
 			},
 
-			sellStock: (userId, symbol, companyName, price, shares, totalReturn) => {
-				fetch(URI + "/portfolio/" + userId, {
-					method: "POST",
+			sellStock: (userId, symbol, price, shares) => {
+				fetch(URI + "/portfolio/1", {
+					method: "PUT",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
 						symbol: symbol,
-						companyName: companyName,
 						price: price,
-						shares: shares,
-						totalReturn: totalReturn
+						shares: parseInt(shares)
 					})
 				})
 					.then(data => data.json())
@@ -70,9 +69,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			loadStockData: () => {
 				const store = getStore();
-				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=b751728eddf21f5e078558c72694cdf2")
+				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=134e7faf232ad1a579a7db83b38ade6e")
 					.then(res => res.json())
-					.then(data => setStore({ ...store, currentStocks: data.slice(0, 20) }))
+					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => alert(err.message));
 			},
 			// signInUser: () => {

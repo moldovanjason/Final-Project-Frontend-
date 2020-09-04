@@ -37,12 +37,16 @@
     left:300px;
 }
 
+.header *{
+    border:1px solid gray;
+}
+
 .logout{
-    color:rgb(255, 255, 255);
-    font-size: 40px;
-    position: relative;
-    top:10px;
-    right:188px;
+    font-size:60px;
+    color:white;
+    border-right: 1px solid #ffffff;
+    padding-right:0px;
+    padding-left:40px;
     }
 
 .logout:hover{
@@ -100,7 +104,7 @@
     height:43px;
     font-size:22px;
     border-radius: 5px;
-    text-shadow:1px 1px 7px #404040;
+    text-shadow:1px 1px 4px #404040;
     border:0px;
     position:relative;
 }
@@ -484,41 +488,26 @@
 
 .usernameheader{
     color:white;
-    height:22px;
-    position: relative;
-    left:625px;
-    top:38px;
 }
 
 .portfoliovalueheader{
     color: white;
-    height:22px;
-    position: relative;
-    left:475px;
-    top:80px;
-    
 }
 
 .buyingpowerheader{
     color:white;
-    height:22px;
-    position: relative;
-    left:243px;
-    top:58px;
-
-    // top:25px;
 }
 
-.vlheader{
-  border-left: 1px solid #ffffff;
-  height: 80px;
-  margin:0px;
-  margin-top:24px;
-  border-radius:5px;
-  position: relative;
-  right:245px;
-  top:10px;
-  }
+// .vlheader{
+//   border-left: 1px solid #ffffff;
+//   height: 80px;
+//   margin:0px;
+//   margin-top:24px;
+//   border-radius:5px;
+//   position: relative;
+//   right:245px;
+//   top:10px;
+//   }
 
   .mystockstitle{
     position:relative;
@@ -527,4 +516,8 @@
     text-align: center;
     font-size:36px;
     color:white;
+  }
+
+  .info{
+      margin-top:20px;
   }
