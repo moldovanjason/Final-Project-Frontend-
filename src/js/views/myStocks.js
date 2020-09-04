@@ -63,23 +63,20 @@ export function MyStocks(props) {
 	});
 
 	return (
-		<div className="container">
+		<div>
 			<div>
 				<Header />
+				<div className="mystockstitle">My Stocks</div>
 				<Navbar {...props} />
 			</div>
-			<div className="username">
-				My Stocks
-				{store.username}
-			</div>
+			{/* <div className="mystockstitle">My Stocks</div> */}
 			<div>
 				<table className="table">
 					<thead>
 						<tr className="rowheaders">
-							<th scope="col" className="headerpadding">
+							<th scope="col" className="sellheaderpadding">
 								Sell
 							</th>
-
 							<th scope="col" className="headerpadding">
 								Symbol
 							</th>

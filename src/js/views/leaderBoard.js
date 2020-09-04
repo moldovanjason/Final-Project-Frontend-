@@ -8,7 +8,7 @@ export function LeaderBoard(props) {
 	return (
 		<div>
 			<Header />
-			<div className="vluserProfile" />
+			<div className="mystockstitle">Leader Boards</div>
 			<Navbar />
 			<table className="table table-striped">
 				<thead>

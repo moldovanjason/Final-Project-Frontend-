@@ -14,8 +14,8 @@ export function TradeStocks(props) {
 	return (
 		<div>
 			<Header />
+			<div className="mystockstitle">Trade Stocks</div>
 			<Navbar />
-			<h1 className="tradestocksheader text-center">Trade Stocks</h1>
 			<table className="table table-striped">
 				<thead>
 					<tr>

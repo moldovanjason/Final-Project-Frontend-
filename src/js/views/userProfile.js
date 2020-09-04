@@ -42,6 +42,7 @@ export class UserProfile extends React.Component {
 		return (
 			<div>
 				<Header />
+				<div className="mystockstitle">User Profile</div>
 				<Navbar />
 				<form className="editform">
 					<div>

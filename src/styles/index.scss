@@ -188,12 +188,6 @@
     left:10px;
 }
 
-.tradestocksheader{
-    margin:0px;
-    background-color: #404040;
-    color:rgb(220, 220, 220) ;
-}
-
 .navbar{
     background-color:#4ea7db;
     height:40px;
@@ -389,7 +383,11 @@
 }
 
 .headerpadding{
-    padding-left: 100px !important;
+    padding-left: 35px !important;
+}
+
+.sellheaderpadding{
+    padding-left:10px;
 }
 
 .cancelbutton{
@@ -407,6 +405,7 @@
 
 .rowheaders{
     border-bottom:#404040 3px solid !important;
+
 }
 
 
@@ -519,4 +518,13 @@
   position: relative;
   right:245px;
   top:10px;
+  }
+
+  .mystockstitle{
+    position:relative;
+    // left:640px;
+    background:#4ea7db;
+    text-align: center;
+    font-size:36px;
+    color:white;
   }

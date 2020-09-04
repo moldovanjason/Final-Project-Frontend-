@@ -33,6 +33,7 @@ export function TransactionHistory(props) {
 	return (
 		<div>
 			<Header />
+			<div className="mystockstitle">Transaction History</div>
 			<Navbar {...props} />
 			<div className="wholetable">
 				<table className="table">
