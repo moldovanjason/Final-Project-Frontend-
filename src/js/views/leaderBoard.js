@@ -11,10 +11,7 @@ export function LeaderBoard(props) {
 
 			<div className="mystockstitle">Leader Boards</div>
 
-			<nav className="navbar navbar-expand-lg navbar-light bg-light">
-				<a className="navbar-brand" href="#">
-					Navbar
-				</a>
+			<nav className="navbar navbar-expand-lg navbar-light">
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -36,8 +33,8 @@ export function LeaderBoard(props) {
 						<a className="nav-link" href="#">
 							Pricing
 						</a>
-						<a className="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">
-							Disabled
+						<a className="nav-link" href="userprofile" tabIndex="-1" aria-disabled="true">
+							User Profile
 						</a>
 					</div>
 				</div>
