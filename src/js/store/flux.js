@@ -25,7 +25,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						username: username,
 						email: email,
 						password: password,
-						buying_power: 50000.0
+						buying_power: buying_power
 					})
 				})
 					.then(data => data.json().then(response => ({ status: data.status, resMsg: response.msg })))
@@ -76,7 +76,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => alert(err.message));
 			}
 			// signInUser: () => {
-
+			//     fetch(URI + "/login", {
+			// 	method: "POST",
+			// 	headers: { "Content-Type": "application/json" },
+			// 	body: JSON.stringify({
+			// 		email: email,
+			// 	})
+			// })
 			// }
 		}
 	};
