@@ -90,8 +90,9 @@ export class Home extends React.Component {
 							<SignUpModal show={this.state.show} hideModal={() => this.closeModal()} />
 							<div className="vlhome" />
 							<div className="about">
-								About PAPER TRADE. THIS IS WHERE WE WILL TELL YOU WHAT THIS WEBSITE IS ABOUT, WHAT YOU
-								CAN DO AND WHAT YOU WILL BE LEARNING!
+								Paper Trade is a trading simulator using real time market data and virtual cash. Users
+								can test their trading strategies without risking their money. The simulator performs
+								like a real brokerage account. Get started for free!
 							</div>
 						</div>
 					</div>
