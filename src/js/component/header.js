@@ -27,11 +27,11 @@ export const Header = props => {
 				</div>
 				<div className="buyingpowerheader">
 					Portfolio Value: $50,000
-					{/* {store.buyingPower} */}
+					{/* {store.portfolioValue} */}
 				</div>
 				<div className="portfoliovalueheader">
 					Buying Power: $50,000
-					{/*{store.portfolioValue}*/}
+					{/*{store.buyingPower}*/}
 				</div>
 			</div>
 		</div>
