@@ -13,7 +13,7 @@ export function LeaderBoard(props) {
 
 			<nav className="navbar navbar-expand-lg navbar-light">
 				<button
-					className="navbar-toggler"
+					className="navbarbutton navbar-toggler"
 					type="button"
 					data-toggle="collapse"
 					data-target="#navbarNavAltMarkup"
@@ -22,18 +22,21 @@ export function LeaderBoard(props) {
 					aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon" />
 				</button>
-				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div className="navbar-nav">
-						<a className="nav-link active" href="#">
-							Home <span className="sr-only">(current)</span>
+				<div className=" navbar-collapse" id="navbarNavAltMarkup">
+					<div className=" newnavbar">
+						<a className="newnavtradestocks" href="/tradestocks">
+							Trade Stocks
 						</a>
-						<a className="nav-link" href="#">
-							Features
+						<a className="newnavtranctionhistory" href="/transactionhistory">
+							Transaction History
 						</a>
-						<a className="nav-link" href="#">
-							Pricing
+						<a className="newnavleaderboards" href="/leaderboards">
+							Leader Boards
 						</a>
-						<a className="nav-link" href="userprofile" tabIndex="-1" aria-disabled="true">
+						<a className="newnavmystocks" href="/mystocks">
+							My Stocks
+						</a>
+						<a className="newnavuserprofile" href="/userprofile" tabIndex="-1" aria-disabled="true">
 							User Profile
 						</a>
 					</div>
