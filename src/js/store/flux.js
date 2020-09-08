@@ -1,4 +1,4 @@
-const URI = "https://3000-dc5b60a1-e9c7-47df-8afe-d76da2d221f2.ws-us02.gitpod.io";
+const URI = "https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -13,6 +13,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				it_active: true,
 				portfolio: []
 			},
+			allUsers: [],
 			currentStocks: []
 		},
 		actions: {
@@ -74,16 +75,34 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => alert(err.message));
+			},
+			loginUser: () => {
+				fetch(URI + "/login", {
+					method: "POST",
+					headers: { "Content-Type": "application/json" },
+					body: JSON.stringify({
+						email: email
+					})
+				});
+			},
+			getUsers: async () => {
+				let users = [];
+				try {
+					let response = await fetch(URI + "/users", {
+						method: "GET",
+						headers: { "Content-Type": "application/json" }
+					});
+					if (response.ok) {
+						users = await response.json();
+					}
+				} catch (err) {
+					console.log(err);
+				}
+				setStore({
+					allUsers: users
+				});
+				console.log(users);
 			}
-			// signInUser: () => {
-			//     fetch(URI + "/login", {
-			// 	method: "POST",
-			// 	headers: { "Content-Type": "application/json" },
-			// 	body: JSON.stringify({
-			// 		email: email,
-			// 	})
-			// })
-			// }
 		}
 	};
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropsTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";
@@ -78,8 +78,11 @@ export class Home extends React.Component {
 									<button
 										type="submit"
 										onClick={() => {
-											this.props.history.push("/myStocks");
-											// actions.loginUser("big@gmail")
+											if (this.state.username == store.user.username) {
+												this.props.history.push("/myStocks");
+											} else {
+												alert("wrong username");
+											}
 										}}
 										className="loginbutton btn">
 										Log In

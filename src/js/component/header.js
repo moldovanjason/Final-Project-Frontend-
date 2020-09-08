@@ -4,8 +4,13 @@ import { StockPage } from "../views/tradeStocks";
 import { PropTypes } from "prop-types";
 import { withRouter } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";
+import { Context } from "../store/appContext";
 
 export const Header = props => {
+	// const CalcPortfolio=()=>{
+
+	// }
+	const { store, actions } = useContext(Context);
 	// const [shares, setShares] = useState(0);
 	// console.log(props);
 	return (
@@ -22,16 +27,17 @@ export const Header = props => {
 			</div>
 			<div className="col-2 info">
 				<div className="usernameheader">
-					*username*
-					{/*store.user.username*/}
+					{/* *username* */}
+					{store.user.username}
 				</div>
 				<div className="buyingpowerheader">
-					Portfolio Value: $50,000
-					{/* {store.portfolioValue} */}
+					{/* Portfolio Value: $50,000 */}
+					Portfolio Value: ${store.portfolioValue}
+					{/* (50,000-buying-Power)+stock.share*current price(stock.symbol) */}
 				</div>
 				<div className="portfoliovalueheader">
-					Buying Power: $50,000
-					{/*{store.buyingPower}*/}
+					{/* Buying Power: $50,000 */}
+					Buying Power: ${store.buyingPower}
 				</div>
 			</div>
 		</div>
