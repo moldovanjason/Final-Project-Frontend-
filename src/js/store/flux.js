@@ -1,4 +1,4 @@
-const URI = "https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io";
+const URI = "https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -17,7 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			currentStocks: []
 		},
 		actions: {
-			createUser: (username, email, password) => {
+			createUser: (username, email, password, buying_power) => {
 				// console.log("user created with", username, email, password);
 				fetch(URI + "/register_user", {
 					method: "POST",
@@ -71,7 +71,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			loadStockData: () => {
 				const store = getStore();
-				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=134e7faf232ad1a579a7db83b38ade6e")
+				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=64ccc969466492f4a1d242430b822645")
 					.then(res => res.json())
 					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => alert(err.message));

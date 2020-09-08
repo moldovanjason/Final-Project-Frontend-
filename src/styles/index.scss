@@ -135,8 +135,9 @@
 }
 
 .input{
-    width:100%;
+    width:100px;
     border-radius:0px;
+    margin-left:10px;
     border:none;
     border-bottom:1px solid #404040;
 }
@@ -275,7 +276,7 @@
 }
 
 .signupmodalheader{
-    background:#404040;
+    background:#4ea7db;
     width:257px;
     position: relative;
     right:1px;
@@ -283,11 +284,20 @@
     color:rgb(220, 220, 220)
 }
 
+.signuptitle{
+    color: white;
+}
+
 .signupmodalfooter{
-    background:#404040;
+    background:#4ea7db;
     width:257px;
     position: relative;
     right:1px;
+}
+
+.X{
+    text-shadow:1px 1px 4px #404040;
+    color:white;
 }
 
 .signupmodal{
@@ -295,14 +305,27 @@
     height:380px;
     position: relative;
     left:120px;
+
+//     filter: blur(2px);
+//   -webkit-filter: blur(2px);
 }
 
 .createaccountbutton{
-    background:rgb(69, 74, 78);
+    background:#42b833;
+    color:rgb(255, 255, 255);
+    width:140px;
+    height:50px;
+    font-size:15px;
+    border-radius: 5px;
+    text-shadow:1px 1px 4px #404040;
+    border:0px;
+    position:relative;
+    box-shadow: 1px 3px 10px #00395a;
+    padding:0px;
 }
 
-.cancelbutton{
-    background:rgb(69, 74, 78);
+.createaccountbutton:hover{
+    color:rgb(201, 201, 201);
 }
 
 .loader {
@@ -373,7 +396,7 @@
     color:#404040;
     width:93%;
     margin:auto;
-    border:#404040 4px solid;
+    // border:#404040 4px solid;
     border-radius: 5px;
     margin-top:10px;
 }
@@ -388,27 +411,33 @@
 
 .headerpadding{
     padding-left: 35px !important;
+    border:0px !important;
 }
 
 .sellheaderpadding{
     padding-left:10px;
+    border:0px !important;
 }
 
 .cancelbutton{
-    width:110px;
-    height:43px;
+    width:100px;
+    height:50px;
     background-color: rgb(230, 72, 44) ;
     color:white;
-    margin:20px;
+    margin:5px;
     border-radius: 5px;
     text-shadow:1px 1px 7px #404040;
     margin-left:31%;
     border:0px;
-    box-shadow: 1px 5px 10px #888888;
+    box-shadow: 1px 3px 10px #00395a;
+}
+
+.cancelbutton:hover{
+    color:rgb(202, 202, 202);
 }
 
 .rowheaders{
-    border-bottom:#404040 3px solid !important;
+    border-bottom:#9c9c9c 3px solid !important;
 
 }
 
@@ -596,4 +625,8 @@
 
 .navbarbutton{
     color:white;
+}
+
+.tradestockssymbol{
+    width:20%;
 }

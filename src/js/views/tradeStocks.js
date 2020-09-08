@@ -65,9 +65,11 @@ export function TradeStocks(props) {
 											// placeholder="Email or Username"
 										/>
 									</td>
-									<td scope="row">{stock.symbol}</td>
-									<td>{stock.name}</td>
-									<td>{stock.price}</td>
+									<td scope="row" className="tradestockssymbol">
+										{stock.symbol}
+									</td>
+									<td className="tradestockssymbol">{stock.name}</td>
+									<td className="tradestockssymbol">{stock.price}</td>
 								</tr>
 							</tbody>
 						</table>
