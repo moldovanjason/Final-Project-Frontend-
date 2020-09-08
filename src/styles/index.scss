@@ -375,6 +375,7 @@
     margin:auto;
     border:#404040 4px solid;
     border-radius: 5px;
+    margin-top:10px;
 }
 
 .aisle{
@@ -511,7 +512,6 @@
 
   .mystockstitle{
     position:relative;
-    // left:640px;
     background:#4ea7db;
     text-align: center;
     font-size:36px;
@@ -523,43 +523,75 @@
   }
 
   .newnavtradestocks{
-    margin-left:215px;
+    margin-left:148px;
     color:white;
+    font-size:20px;
   }
   
   .newnavtradestocks:hover{
     color:rgb(211, 211, 211);
-    text-decoration: none underline;
+    text-decoration: none;
   }
 
   .newnavtranctionhistory{
+    font-size:20px;
     margin-left:100px;
     color:white;
   }
 
-  .newnavleaderboards{
-    margin-left:100px;
-    color:white;
+  .newnavtranctionhistory:hover{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
   }
 
   .newnavleaderboards{
+      font-size:20px;
     margin-left:100px;
     color:white;
   }
 
   .newnavleaderboards:hover{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+  }
+
+
+  .newnavleaderboards{
+    font-size:20px;
     margin-left:100px;
     color:white;
+  }
+
+  .newnavleaderboards:hover{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+  }
+
+  .newnavleaderboards:hover{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
   }
 
   .newnavmystocks{
+    font-size:20px;
     margin-left:100px;
     color:white;
   }
 
+  .newnavmystocks:hover{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
+  }
+
 .newnavuserprofile{
+    font-size:20px;
     margin-left:100px;
     color:white;
+}
+
+.newnavuserprofile:hover{
+    color:rgb(211, 211, 211);
+    text-decoration: none;
 }
 
 .navbarbutton{
