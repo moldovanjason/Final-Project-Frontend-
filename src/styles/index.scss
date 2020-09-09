@@ -415,17 +415,22 @@
     color:#404040;
     width:93%;
     margin:auto;
-    // border:#404040 4px solid;
     border-radius: 5px;
-    margin-top:10px;
+    border-bottom:0px;
 }
 
 .aisle{
-    border:#404040 1px solid;
+    border-left:#dee2e6 1px solid;
+    border-right:#dee2e6 1px solid;
+}
+
+.aislelast{
+    border-left:#dee2e6 1px solid;
+    // border-right:#dee2e6 1px solid;
 }
 
 .tablerow:hover{
-    background:#d5d5d5;
+    background:#ccebaaab;
 }
 
 .headerpadding{
@@ -456,7 +461,7 @@
 }
 
 .rowheaders{
-    border-bottom:#9c9c9c 3px solid !important;
+    //border-bottom:#9c9c9c 3px solid !important;
 
 }
 
@@ -651,22 +656,23 @@
 }
 
 .buytradestocks{
-    padding-left:123px;
+    padding:10px;
+    padding-left:150px;
     font-size:20px;
 }
 
 .symboltradestocks{
-    padding-left:220px;
+    padding-left:185px;
     font-size:20px;
 }
 
 .nametradestocks{
-    padding-left:311px;
+    padding-left:308px;
     font-size:20px;
 }
 
 .pricetradestocks{
-    padding-left:246px;
+    padding-left:252px;
     font-size:20px;
 }
 
@@ -674,11 +680,27 @@
     background:#42b833;
     color:rgb(255, 255, 255);
     width:90px;
-    height:40px;
+    height:38px;
     font-size:20px;
     border-radius: 5px;
     text-shadow:1px 1px 4px #404040;
     border:0px;
     position:relative;
     box-shadow: 1px 5px 10px #888888;
+}
+
+.tableheadertop{
+    margin-top:40px;
+}
+
+.sellmystocks{
+    border:0px;
+}
+
+.mystockborder{
+    border-left:1px solid #dee2e6;
+}
+
+.sell{
+    border:0px !important;
 }

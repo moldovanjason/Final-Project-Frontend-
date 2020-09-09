@@ -31,9 +31,10 @@ export function MyStocks(props) {
 	const listOfStocks = portfolio.map((stock, index) => {
 		return (
 			<tr className="tablerow" key={index}>
-				<td>
+				<td className="mystocksborder">
 					<button
 						className="buystockbutton"
+						href="/mystocks"
 						onClick={() => {
 							actions.sellStock(1, stock.symbol, stock.price, shares);
 						}}>
@@ -57,7 +58,7 @@ export function MyStocks(props) {
 				<td className="aisle">{stock.price}</td>
 				<td className="aisle">{currentPrice(stock.symbol)}</td>
 				<td className="aisle">{stock.shares * currentPrice(stock.symbol)}</td>
-				<td className="aisle">{currentPrice(stock.symbol) - stock.price}</td>
+				<td className="aislelast">{currentPrice(stock.symbol) - stock.price}</td>
 			</tr>
 		);
 	});
@@ -69,13 +70,11 @@ export function MyStocks(props) {
 				<div className="mystockstitle">My Stocks</div>
 				<Navbar {...props} />
 			</div>
-			{/* <div className="mystockstitle">My Stocks</div> */}
-			<div>
-				{/* <button onClick={() => actions.loadStockData()}>Get Data</button> */}
+			<div className="tableheadertop">
 				<table className="table">
 					<thead>
 						<tr className="rowheaders">
-							<th scope="col" className="sellheaderpadding">
+							<th scope="col" className="sell">
 								Sell
 							</th>
 							<th scope="col" className="headerpadding">
