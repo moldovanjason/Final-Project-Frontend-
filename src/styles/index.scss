@@ -135,9 +135,9 @@
 }
 
 .input{
-    width:100px;
+    width:130px;
     border-radius:0px;
-    margin-left:10px;
+    margin-left:15px;
     border:none;
     border-bottom:1px solid #404040;
 }
@@ -648,4 +648,37 @@
 
 .tradestockssymbol{
     width:25%;
+}
+
+.buytradestocks{
+    padding-left:123px;
+    font-size:20px;
+}
+
+.symboltradestocks{
+    padding-left:220px;
+    font-size:20px;
+}
+
+.nametradestocks{
+    padding-left:311px;
+    font-size:20px;
+}
+
+.pricetradestocks{
+    padding-left:246px;
+    font-size:20px;
+}
+
+.buystockbutton{
+    background:#42b833;
+    color:rgb(255, 255, 255);
+    width:90px;
+    height:40px;
+    font-size:20px;
+    border-radius: 5px;
+    text-shadow:1px 1px 4px #404040;
+    border:0px;
+    position:relative;
+    box-shadow: 1px 5px 10px #888888;
 }

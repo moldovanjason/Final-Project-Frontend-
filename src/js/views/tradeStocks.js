@@ -16,32 +16,33 @@ export function TradeStocks(props) {
 			<Header />
 			<div className="mystockstitle">Trade Stocks</div>
 			<Navbar />
+			<thead>
+				<tr>
+					<th scope="col" className="buytradestocks">
+						Buy
+					</th>
+					<th scope="col" className="symboltradestocks">
+						Symbol
+					</th>
+					<th scope="col" className="nametradestocks">
+						Name
+					</th>
+					<th scope="col" className="pricetradestocks">
+						Price
+					</th>
+				</tr>
+			</thead>
 			{store.currentStocks.length < 1 ? (
 				<div> Stock data is loading... </div>
 			) : (
 				store.currentStocks.map((stock, index) => {
 					return (
 						<table className="table" key={index}>
-							<thead>
-								<tr>
-									<th scope="col" className="">
-										Buy
-									</th>
-									<th scope="col" className="">
-										Symbol
-									</th>
-									<th scope="col" className="">
-										Name
-									</th>
-									<th scope="col" className="">
-										Price
-									</th>
-								</tr>
-							</thead>
 							<tbody>
 								<tr className="">
 									<td>
 										<button
+											className="buystockbutton"
 											onClick={() => {
 												actions.buyStock(
 													1,
@@ -62,7 +63,7 @@ export function TradeStocks(props) {
 											className="input"
 											type="text"
 											aria-describedby="emailHelp"
-											// placeholder="Email or Username"
+											placeholder="Enter # of shares"
 										/>
 									</td>
 									<td scope="row" className="tradestockssymbol">

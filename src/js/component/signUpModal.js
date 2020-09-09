@@ -90,7 +90,7 @@ export const SignUpModal = props => {
 							</div>
 						</div>
 						<div className="signupmodalfooter modal-footer">
-							<button type="submit" className="createaccountbutton " onClick={e => handleSubmit(e)}>
+							<button type="submit" className="createaccountbutton" onClick={e => handleSubmit(e)}>
 								Create Account
 							</button>
 							<button

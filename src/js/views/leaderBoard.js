@@ -8,9 +8,8 @@ export function LeaderBoard(props) {
 	return (
 		<div>
 			<Header />
-			<Navbar />
-
 			<div className="mystockstitle">Leader Boards</div>
+			<Navbar />
 
 			<table className="table table-striped">
 				<thead>
