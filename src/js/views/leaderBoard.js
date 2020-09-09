@@ -11,7 +11,7 @@ export function LeaderBoard(props) {
 			<div className="mystockstitle">Leader Boards</div>
 			<Navbar />
 
-			<table className="table table-striped">
+			<table className="table">
 				<thead>
 					<tr>
 						<th scope="col">Rank</th>
