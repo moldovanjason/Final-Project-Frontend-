@@ -3,6 +3,7 @@ import PropsTypes from "prop-types";
 import { Navbar } from "../component/navbar";
 import { Header } from "../component/header";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 //create your first component
 export function TradeStocks(props) {
@@ -41,20 +42,22 @@ export function TradeStocks(props) {
 							<tbody>
 								<tr className="">
 									<td>
-										<button
-											className="buystockbutton"
-											onClick={() => {
-												actions.buyStock(
-													1,
-													stock.symbol,
-													stock.name,
-													stock.price,
-													shares,
-													5.67
-												);
-											}}>
-											Buy
-										</button>
+										<Link to="/mystocks">
+											<button
+												className="buystockbutton"
+												onClick={() => {
+													actions.buyStock(
+														1,
+														stock.symbol,
+														stock.name,
+														stock.price,
+														shares,
+														5.67
+													);
+												}}>
+												Buy
+											</button>
+										</Link>
 										<input
 											onChange={event => {
 												setShares(parseFloat(event.target.value));
