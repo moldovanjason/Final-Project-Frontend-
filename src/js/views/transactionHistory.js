@@ -18,14 +18,14 @@ export function TransactionHistory(props) {
 
 	const listOfStocks = transactions.map((transaction, index) => {
 		return (
-			<tr className="tablerow" key={index}>
-				<td className="aisle">{transaction.id}</td>
-				<td className="aisle">{transaction.symbol}</td>
-				<td className="aisle">{transaction.transactionName}</td>
-				<td className="aisle">{transaction.price}</td>
-				<td className="aisle">{transaction.shares}</td>
-				<td className="aisle">{transaction.value}</td>
-				<td className="aisle">{transaction.date}</td>
+			<tr className="aisleth" key={index}>
+				<td className="aisleth">{transaction.id}</td>
+				<td className="aisleth">{transaction.symbol}</td>
+				<td className="aisleth">{transaction.transactionName}</td>
+				<td className="aisleth">{transaction.price}</td>
+				<td className="aisleth">{transaction.shares}</td>
+				{/* <td className="aisleth">{transaction.value}</td> */}
+				<td className="aisleth">{transaction.date}</td>
 			</tr>
 		);
 	});
@@ -54,9 +54,9 @@ export function TransactionHistory(props) {
 							<th scope="col" className="headerpadding">
 								Shares
 							</th>
-							<th scope="col" className="headerpadding">
+							{/* <th scope="col" className="headerpadding">
 								Value
-							</th>
+							</th> */}
 							<th scope="col" className="headerpadding">
 								Date
 							</th>
