@@ -30,14 +30,14 @@ export const Header = props => {
 					{/* *username* */}
 					{store.user.username}
 				</div>
-				<div className="buyingpowerheader">
+				<div className="portfoliovalueheader">
 					{/* Portfolio Value: $50,000 */}
-					Portfolio Value: ${store.portfolioValue}
+					Portfolio Value: ${store.user.portfolioValue}
 					{/* (50,000-buying-Power)+stock.share*current price(stock.symbol) */}
 				</div>
-				<div className="portfoliovalueheader">
+				<div className="buyingpowerheader">
 					{/* Buying Power: $50,000 */}
-					Buying Power: ${store.buyingPower}
+					Buying Power: ${store.user.buyingPower}
 				</div>
 			</div>
 		</div>

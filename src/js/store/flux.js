@@ -3,14 +3,14 @@ const URI = "https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			portfolioValue: 50000,
-			buyingPower: 50000,
 			user: {
 				userId: 1,
 				username: "Moldovanjason",
 				email: "moldovanjason@gmail.com",
 				password: "okokokok",
 				it_active: true,
+				portfolioValue: 50000,
+				buyingPower: 50000,
 				portfolio: []
 			},
 			allUsers: [],
