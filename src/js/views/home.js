@@ -55,7 +55,7 @@ export class Home extends React.Component {
 												this.setState({ ...this.state, username: event.target.value });
 											}}
 											value={this.state.username}
-											className="input"
+											className="homeinput"
 											type="email"
 											id="exampleInputEmail1"
 											aria-describedby="emailHelp"
@@ -70,7 +70,7 @@ export class Home extends React.Component {
 											}}
 											value={this.state.password}
 											type="password"
-											className="input"
+											className="homeinput"
 											id="exampleInputPassword1"
 											// placeholder="Password"
 										/>

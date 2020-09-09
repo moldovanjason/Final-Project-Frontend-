@@ -21,7 +21,7 @@ export function TradeStocks(props) {
 			) : (
 				store.currentStocks.map((stock, index) => {
 					return (
-						<table className="table table-striped" key={index}>
+						<table className="table" key={index}>
 							<thead>
 								<tr>
 									<th scope="col" className="">

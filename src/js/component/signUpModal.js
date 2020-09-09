@@ -53,7 +53,7 @@ export const SignUpModal = props => {
 										}}
 										value={state.username}
 										type="text"
-										className="input"
+										className="signupinput"
 										id="inputFirstName"
 										// placeholder="username"
 										required
@@ -67,7 +67,7 @@ export const SignUpModal = props => {
 										}}
 										value={state.email}
 										type="text"
-										className="input"
+										className="signupinput"
 										id="inputEmail"
 										// placeholder="something@email.com"
 										required
@@ -81,7 +81,7 @@ export const SignUpModal = props => {
 										}}
 										value={state.password}
 										type="password"
-										className="input"
+										className="signupinput"
 										id="inputPassword4"
 										// placeholder="**********"
 										required
