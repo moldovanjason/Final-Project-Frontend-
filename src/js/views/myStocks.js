@@ -33,6 +33,7 @@ export function MyStocks(props) {
 			<tr className="tablerow" key={index}>
 				<td>
 					<button
+						className="buystockbutton"
 						onClick={() => {
 							actions.sellStock(1, stock.symbol, stock.price, shares);
 						}}>
@@ -47,7 +48,7 @@ export function MyStocks(props) {
 						type="email"
 						id="exampleInputEmail1"
 						aria-describedby="emailHelp"
-						// placeholder="Email or Username"
+						placeholder="Enter # of shares"
 					/>
 				</td>
 				<td className="aisle">{stock.symbol}</td>
