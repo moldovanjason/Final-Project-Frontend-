@@ -33,17 +33,17 @@ export class Home extends React.Component {
 				{({ store, actions }) => (
 					<div>
 						<div className="header navbar-expand-lg ">
-							<a className="papertrade navbar-brand" href="/">
+							<Link className="papertrade navbar-brand" to="/">
 								PAPER TRADE
-							</a>
-							<a
+							</Link>
+							<Link
 								className="signup nav-link"
-								href="#"
+								to="#"
 								onClick={() => {
 									this.showModal();
 								}}>
 								Sign Up
-							</a>
+							</Link>
 						</div>
 						<div className="middle">
 							<div className="login">
@@ -75,18 +75,21 @@ export class Home extends React.Component {
 											// placeholder="Password"
 										/>
 									</div>
-									<button
-										type="submit"
-										onClick={() => {
-											if (this.state.username == store.user.username) {
-												this.props.history.push("/myStocks");
-											} else {
-												alert("wrong username");
-											}
-										}}
-										className="loginbutton btn">
-										Log In
-									</button>
+									<Link to={store.token != null ? "/mystocks" : "/"}>
+										<button
+											type="button"
+											onClick={() => actions.loginUser(this.state.username, this.state.password)}
+											// onClick={() => {
+											// 	if (this.state.username == store.user.username) {
+											// 		this.props.history.push("/myStocks");
+											// 	} else {
+											// 		alert("wrong username");
+											// 	}
+											// }}
+											className="loginbutton btn">
+											Log In
+										</button>
+									</Link>
 									{/* <SignUp /> */}
 								</form>
 							</div>

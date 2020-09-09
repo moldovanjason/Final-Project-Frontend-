@@ -20,21 +20,21 @@ export const Navbar = props => {
 			</button>
 			<div className=" navbar-collapse" id="navbarNavAltMarkup">
 				<div className=" newnavbar">
-					<a className="newnavtradestocks" href="/tradestocks">
+					<Link className="newnavtradestocks" to="/tradestocks">
 						Trade Stocks
-					</a>
-					<a className="newnavtranctionhistory" href="/transactionhistory">
+					</Link>
+					<Link className="newnavtranctionhistory" to="/transactionhistory">
 						Transaction History
-					</a>
-					<a className="newnavleaderboards" href="/leaderboard">
+					</Link>
+					<Link className="newnavleaderboards" to="/leaderboard">
 						Leader Boards
-					</a>
-					<a className="newnavmystocks" href="/mystocks">
+					</Link>
+					<Link className="newnavmystocks" to="/mystocks">
 						My Stocks
-					</a>
-					<a className="newnavuserprofile" href="/userprofile" tabIndex="-1" aria-disabled="true">
+					</Link>
+					<Link className="newnavuserprofile" to="/userprofile" tabIndex="-1" aria-disabled="true">
 						User Profile
-					</a>
+					</Link>
 				</div>
 			</div>
 		</nav>
@@ -43,29 +43,29 @@ export const Navbar = props => {
 		// 	<div className="collapse navbar-collapse" id="navbarNav">
 		// 		<ul className="navbartext navbar-nav">
 		// 			<li className="nav-item">
-		// 				<a className="tradestocks nav-link" href="/tradestocks">
+		// 				<Link className="tradestocks nav-link" to="/tradestocks">
 		// 					Trade Stocks
-		// 				</a>
+		// 				</Link>
 		// 			</li>
 		// 			<li className="nav-item">
-		// 				<a className="transactionhistory nav-link" href="/transactionhistory">
+		// 				<Link className="transactionhistory nav-link" to="/transactionhistory">
 		// 					Transaction History
-		// 				</a>
+		// 				</Link>
 		// 			</li>
 		// 			<li className="nav-item">
-		// 				<a className="leaderboard nav-link" href="/leaderboard">
+		// 				<Link className="leaderboard nav-link" to="/leaderboard">
 		// 					Leader Board
-		// 				</a>
+		// 				</Link>
 		// 			</li>
 		// 			<li className="nav-item">
-		// 				<a className="mystocks nav-link" href="/mystocks">
+		// 				<Link className="mystocks nav-link" to="/mystocks">
 		// 					My Stocks
-		// 				</a>
+		// 				</Link>
 		// 			</li>
 		// 			<li className="nav-item">
-		// 				<a className="userprofile nav-link" href="/userprofile">
+		// 				<Link className="userprofile nav-link" to="/userprofile">
 		// 					User Profile
-		// 				</a>
+		// 				</Link>
 		// 			</li>
 		// 		</ul>
 		// 	</div>
@@ -80,16 +80,16 @@ export default withRouter(Navbar);
 
 {
 	/* <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <Link class="navbar-brand" to="#">Navbar</Link>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Features</a>
-      <a class="nav-link" href="#">Pricing</a>
-      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      <Link class="nav-link active" to="#">Home <span class="sr-only">(current)</span></Link>
+      <Link class="nav-link" to="#">Features</Link>
+      <Link class="nav-link" to="#">Pricing</Link>
+      <Link class="nav-link disabled" to="#" tabindex="-1" aria-disabled="true">Disabled</Link>
     </div>
   </div>
 </nav> */

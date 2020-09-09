@@ -16,14 +16,14 @@ export const Header = props => {
 	return (
 		<div className="row header navbar-expand-lg d-flex">
 			<div className="col-8">
-				<a className="papertrade navbar-brand" href="/mystocks" onClick={() => props.history.push("/mystocks")}>
+				<Link className="papertrade navbar-brand" to="/mystocks">
 					PAPER TRADE
-				</a>
+				</Link>
 			</div>
 			<div className="col-2">
-				<a className="logout nav-link" href="/home" onClick={() => props.history.push("/home")}>
+				<Link className="logout nav-link" to="/home" onClick={() => actions.logoutUser()}>
 					Log Out
-				</a>
+				</Link>
 			</div>
 			<div className="col-2 info">
 				<div className="usernameheader">
@@ -37,7 +37,7 @@ export const Header = props => {
 				</div>
 				<div className="buyingpowerheader">
 					{/* Buying Power: $50,000 */}
-					Buying Power: ${store.user.buyingPower}
+					Buying Power: ${store.user.buying_power}
 				</div>
 			</div>
 		</div>

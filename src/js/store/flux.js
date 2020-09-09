@@ -3,18 +3,20 @@ const URI = "https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user: {
-				userId: 1,
-				username: "Moldovanjason",
-				email: "moldovanjason@gmail.com",
-				password: "okokokok",
-				it_active: true,
-				portfolioValue: 50000,
-				buyingPower: 50000,
-				portfolio: []
-			},
-			allUsers: [],
-			currentStocks: []
+			token: null,
+			user: null
+			// 	user: {
+			// 		userId: 1,
+			// 		username: "Moldovanjason",
+			// 		email: "moldovanjason@gmail.com",
+			// 		password: "okokokok",
+			// 		it_active: true,
+			// 		portfolioValue: 50000,
+			// 		buyingPower: 50000,
+			// 		portfolio: []
+			// 	},
+			// 	allUsers: [],
+			// 	currentStocks: []
 		},
 		actions: {
 			createUser: (username, email, password, buying_power) => {
@@ -76,14 +78,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => alert(err.message));
 			},
-			loginUser: () => {
+			loginUser: (username, password) => {
 				fetch(URI + "/login", {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
 					body: JSON.stringify({
-						email: email
+						username: username,
+						password: password
 					})
-				});
+				})
+					.then(response => response.json())
+					.then(data => setStore({ token: data.jwt, user: data.user }));
+			},
+			logoutUser: () => {
+				setStore({ token: null, user: null });
 			},
 			getUsers: async () => {
 				let users = [];
