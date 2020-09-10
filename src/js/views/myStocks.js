@@ -11,7 +11,11 @@ export function MyStocks(props) {
 	const [shares, setShares] = useState(0);
 	const [portfolio, setPortfolio] = useState([]);
 	useEffect(() => {
+<<<<<<< HEAD
 		fetch("https://3000-dc5b60a1-e9c7-47df-8afe-d76da2d221f2.ws-us02.gitpod.io/portfolio/3")
+=======
+		fetch("https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io/portfolio/1")
+>>>>>>> cce46a4d984f580ef0e7ae6a1c59a6c5ecc1deb6
 			.then(response => response.json())
 			.then(data => setPortfolio(data));
 		// create another fetch to compare with data from user
@@ -32,8 +36,10 @@ export function MyStocks(props) {
 	const listOfStocks = portfolio.map((stock, index) => {
 		return (
 			<tr className="tablerow" key={index}>
-				<td>
+				<td className="mystocksborder">
 					<button
+						className="buystockbutton"
+						href="/mystocks"
 						onClick={() => {
 							actions.sellStock(1, stock.symbol, stock.price, shares);
 						}}>
@@ -48,7 +54,7 @@ export function MyStocks(props) {
 						type="email"
 						id="exampleInputEmail1"
 						aria-describedby="emailHelp"
-						// placeholder="Email or Username"
+						placeholder="Enter # of shares"
 					/>
 				</td>
 				<td className="aisle">{stock.symbol}</td>
@@ -57,7 +63,7 @@ export function MyStocks(props) {
 				<td className="aisle">{stock.price}</td>
 				<td className="aisle">{currentPrice(stock.symbol)}</td>
 				<td className="aisle">{stock.shares * currentPrice(stock.symbol)}</td>
-				<td className="aisle">{currentPrice(stock.symbol) - stock.price}</td>
+				<td className="aislelast">{currentPrice(stock.symbol) - stock.price}</td>
 			</tr>
 		);
 	});
@@ -69,19 +75,17 @@ export function MyStocks(props) {
 				<div className="mystockstitle">My Stocks</div>
 				<Navbar {...props} />
 			</div>
-			{/* <div className="mystockstitle">My Stocks</div> */}
-			<div>
-				{/* <button onClick={() => actions.loadStockData()}>Get Data</button> */}
+			<div className="tableheadertop">
 				<table className="table">
 					<thead>
 						<tr className="rowheaders">
-							<th scope="col" className="sellheaderpadding">
+							<th scope="col" className="sell">
 								Sell
 							</th>
 							<th scope="col" className="headerpadding">
 								Symbol
 							</th>
-							<th scope="col" className="headerpadding">
+							<th scope="col" className="nameheaderpadding">
 								Name
 							</th>
 							<th scope="col" className="headerpadding">

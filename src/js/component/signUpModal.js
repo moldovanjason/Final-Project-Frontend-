@@ -30,28 +30,30 @@ export const SignUpModal = props => {
 			<div className="modal-dialog" role="document">
 				<div className="signupmodal modal-content">
 					<div className="signupmodalheader modal-header">
-						<h5 className="modal-title">Sign Up</h5>
+						<h5 className="signuptitle modal-title">Sign Up</h5>
 						<button
 							type="button"
 							className="close"
 							data-dismiss="modal"
 							aria-label="Close"
 							onClick={() => props.hideModal()}>
-							<span aria-hidden="true">&times;</span>
+							<span aria-hidden="true" className="X">
+								&times;
+							</span>
 						</button>
 					</div>
 					<form>
 						<div className="modal-body">
 							<div className="form-row">
 								<div className="usernamesignup form-group ">
-									<label htmlFor="inputFirstName">USER NAME</label>
+									<label htmlFor="inputFirstName">USERNAME</label>
 									<input
 										onChange={event => {
 											setState({ ...state, username: event.target.value });
 										}}
 										value={state.username}
 										type="text"
-										className="input"
+										className="signupinput"
 										id="inputFirstName"
 										// placeholder="username"
 										required
@@ -65,7 +67,7 @@ export const SignUpModal = props => {
 										}}
 										value={state.email}
 										type="text"
-										className="input"
+										className="signupinput"
 										id="inputEmail"
 										// placeholder="something@email.com"
 										required
@@ -79,7 +81,7 @@ export const SignUpModal = props => {
 										}}
 										value={state.password}
 										type="password"
-										className="input"
+										className="signupinput"
 										id="inputPassword4"
 										// placeholder="**********"
 										required
@@ -88,16 +90,13 @@ export const SignUpModal = props => {
 							</div>
 						</div>
 						<div className="signupmodalfooter modal-footer">
-							<button
-								type="submit"
-								className="createaccountbutton btn btn-secondary"
-								onClick={e => handleSubmit(e)}>
+							<button type="submit" className="createaccountbutton" onClick={e => handleSubmit(e)}>
 								Create Account
 							</button>
 							<button
 								type="button"
 								href="/home"
-								className="cancelbutton btn btn-secondary"
+								className="cancelbutton"
 								onClick={() => props.hideModal()}
 								data-dismiss="modal">
 								Cancel

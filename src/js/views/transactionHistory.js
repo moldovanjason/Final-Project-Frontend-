@@ -10,7 +10,7 @@ export function TransactionHistory(props) {
 	const { store, actions } = useContext(Context);
 	const [transactions, setTransactions] = useState([]);
 	useEffect(() => {
-		fetch("https://3000-ee414221-0bf8-4693-a1c5-671ebb7df98e.ws-us02.gitpod.io/transaction")
+		fetch("https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io/transaction")
 			.then(response => response.json())
 			.then(data => setTransactions(data.Transactions));
 		// create another fetch to compare with data from user
@@ -18,14 +18,14 @@ export function TransactionHistory(props) {
 
 	const listOfStocks = transactions.map((transaction, index) => {
 		return (
-			<tr className="tablerow" key={index}>
-				<td className="aisle">{transaction.id}</td>
-				<td className="aisle">{transaction.symbol}</td>
-				<td className="aisle">{transaction.transactionName}</td>
-				<td className="aisle">{transaction.price}</td>
-				<td className="aisle">{transaction.shares}</td>
-				<td className="aisle">{transaction.value}</td>
-				<td className="aisle">{transaction.date}</td>
+			<tr className="aisleth" key={index}>
+				<td className="aisleth">{transaction.id}</td>
+				<td className="aisleth">{transaction.symbol}</td>
+				<td className="aisleth">{transaction.transactionName}</td>
+				<td className="aisleth">{transaction.price}</td>
+				<td className="aisleth">{transaction.shares}</td>
+				{/* <td className="aisleth">{transaction.value}</td> */}
+				<td className="aisleth">{transaction.date}</td>
 			</tr>
 		);
 	});
@@ -54,9 +54,9 @@ export function TransactionHistory(props) {
 							<th scope="col" className="headerpadding">
 								Shares
 							</th>
-							<th scope="col" className="headerpadding">
+							{/* <th scope="col" className="headerpadding">
 								Value
-							</th>
+							</th> */}
 							<th scope="col" className="headerpadding">
 								Date
 							</th>

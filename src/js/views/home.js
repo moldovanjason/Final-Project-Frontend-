@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropsTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";
@@ -33,17 +33,17 @@ export class Home extends React.Component {
 				{({ store, actions }) => (
 					<div>
 						<div className="header navbar-expand-lg ">
-							<a className="papertrade navbar-brand" href="/">
+							<Link className="papertradehome navbar-brand" to="/">
 								PAPER TRADE
-							</a>
-							<a
+							</Link>
+							<Link
 								className="signup nav-link"
-								href="#"
+								to="#"
 								onClick={() => {
 									this.showModal();
 								}}>
 								Sign Up
-							</a>
+							</Link>
 						</div>
 						<div className="middle">
 							<div className="login">
@@ -55,7 +55,7 @@ export class Home extends React.Component {
 												this.setState({ ...this.state, username: event.target.value });
 											}}
 											value={this.state.username}
-											className="input"
+											className="homeinput"
 											type="email"
 											id="exampleInputEmail1"
 											aria-describedby="emailHelp"
@@ -70,20 +70,26 @@ export class Home extends React.Component {
 											}}
 											value={this.state.password}
 											type="password"
-											className="input"
+											className="homeinput"
 											id="exampleInputPassword1"
 											// placeholder="Password"
 										/>
 									</div>
-									<button
-										type="submit"
-										onClick={() => {
-											this.props.history.push("/myStocks");
-											// actions.loginUser("big@gmail")
-										}}
-										className="loginbutton btn">
-										Log In
-									</button>
+									<Link to={store.token != null ? "/mystocks" : "/"}>
+										<button
+											type="button"
+											onClick={() => actions.loginUser(this.state.username, this.state.password)}
+											// onClick={() => {
+											// 	if (this.state.username == store.user.username) {
+											// 		this.props.history.push("/myStocks");
+											// 	} else {
+											// 		alert("wrong username");
+											// 	}
+											// }}
+											className="loginbutton btn">
+											Log In
+										</button>
+									</Link>
 									{/* <SignUp /> */}
 								</form>
 							</div>
