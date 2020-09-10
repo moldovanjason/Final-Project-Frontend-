@@ -11,11 +11,12 @@ export function MyStocks(props) {
 	const [shares, setShares] = useState(0);
 	const [portfolio, setPortfolio] = useState([]);
 	useEffect(() => {
-		fetch("https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io/portfolio/1")
+		fetch("https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io//portfolio/1")
 			.then(response => response.json())
 			.then(data => setPortfolio(data));
 		// create another fetch to compare with data from user
-	}, []);
+	});
+	[];
 
 	// for current value column, we need to loop through store.currentStocks,
 	// compair symbols from stock symbol in portfolio, and when symbol matched
