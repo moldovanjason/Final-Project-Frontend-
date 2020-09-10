@@ -70,7 +70,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			loadStockData: () => {
 				const store = getStore();
-				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=134e7faf232ad1a579a7db83b38ade6e")
+				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=f19b2da4e27cfbbaeaa219bc4d346fd5")
 					.then(res => res.json())
 					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => alert(err.message));
