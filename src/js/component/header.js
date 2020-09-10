@@ -5,6 +5,7 @@ import { PropTypes } from "prop-types";
 import { withRouter } from "react-router-dom";
 import { SignUpModal } from "../component/signUpModal";
 import { Context } from "../store/appContext";
+import Logo from "../../img/Logo-nooutline.png";
 
 export const Header = props => {
 	// const CalcPortfolio=()=>{
@@ -17,7 +18,10 @@ export const Header = props => {
 		<div className="row header navbar-expand-lg d-flex">
 			<div className="col-8">
 				<Link className="papertrade navbar-brand" to="/mystocks">
-					PAPER TRADE
+					<span>
+						<i className="fas fa-chart-bar" />
+						PaperTrade
+					</span>
 				</Link>
 			</div>
 			<div className="col-2">
@@ -32,12 +36,12 @@ export const Header = props => {
 				</div>
 				<div className="portfoliovalueheader">
 					{/* Portfolio Value: $50,000 */}
-					Portfolio Value: ${store.user.portfolioValue}
+					Portfolio Value: $ {store.user.portfolioValue}
 					{/* (50,000-buying-Power)+stock.share*current price(stock.symbol) */}
 				</div>
 				<div className="buyingpowerheader">
 					{/* Buying Power: $50,000 */}
-					Buying Power: ${store.user.buying_power}
+					Buying Power: ${store.user.buyingPower}
 				</div>
 			</div>
 		</div>

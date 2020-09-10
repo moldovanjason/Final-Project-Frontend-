@@ -18,24 +18,22 @@ export const Navbar = props => {
 				aria-label="Toggle navigation">
 				<span className="navbar-toggler-icon" />
 			</button>
-			<div className=" navbar-collapse" id="navbarNavAltMarkup">
-				<div className=" newnavbar">
-					<Link className="newnavtradestocks" to="/tradestocks">
-						Trade Stocks
-					</Link>
-					<Link className="newnavtranctionhistory" to="/transactionhistory">
-						Transaction History
-					</Link>
-					<Link className="newnavleaderboards" to="/leaderboard">
-						Leader Boards
-					</Link>
-					<Link className="newnavmystocks" to="/mystocks">
-						My Stocks
-					</Link>
-					<Link className="newnavuserprofile" to="/userprofile" tabIndex="-1" aria-disabled="true">
-						User Profile
-					</Link>
-				</div>
+			<div className="navbar-collapse" id="navbarNavAltMarkup">
+				<Link className="newnavtradestocks" to="/tradestocks">
+					Trade Stocks
+				</Link>
+				<Link className="newnavtranctionhistory" to="/transactionhistory">
+					Transaction History
+				</Link>
+				<Link className="newnavleaderboards" to="/leaderboard">
+					Leader Boards
+				</Link>
+				<Link className="newnavmystocks" to="/mystocks">
+					My Stocks
+				</Link>
+				<Link className="newnavuserprofile" to="/userprofile" tabIndex="-1" aria-disabled="true">
+					User Profile
+				</Link>
 			</div>
 		</nav>
 

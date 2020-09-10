@@ -75,10 +75,10 @@ export class Home extends React.Component {
 											// placeholder="Password"
 										/>
 									</div>
-									<Link to={store.token != null ? "/mystocks" : "/"}>
+									<Link to={"/mystocks"}>
 										<button
 											type="button"
-											onClick={() => actions.loginUser(this.state.username, this.state.password)}
+											//onClick={() => actions.loginUser(this.state.username, this.state.password)}
 											// onClick={() => {
 											// 	if (this.state.username == store.user.username) {
 											// 		this.props.history.push("/myStocks");
