@@ -80,7 +80,7 @@ export function MyStocks(props) {
 							<th scope="col" className="headerpadding">
 								Symbol
 							</th>
-							<th scope="col" className="headerpadding">
+							<th scope="col" className="nameheaderpadding">
 								Name
 							</th>
 							<th scope="col" className="headerpadding">

@@ -47,7 +47,7 @@ export class UserProfile extends React.Component {
 				<form className="editform">
 					<div>
 						<div className="editprofileuserprofile">Edit Profile</div>
-						<label className="label userprofilepadding">*USERNAME HERE*</label>
+						<label className="label userprofilepadding">{store.user.username}</label>
 						{/* <input
 								onChange={event => {
 									this.setState({ ...this.state, fullName: event.target.value });

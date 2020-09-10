@@ -33,7 +33,7 @@ export class Home extends React.Component {
 				{({ store, actions }) => (
 					<div>
 						<div className="header navbar-expand-lg ">
-							<Link className="papertrade navbar-brand" to="/">
+							<Link className="papertradehome navbar-brand" to="/">
 								PAPER TRADE
 							</Link>
 							<Link

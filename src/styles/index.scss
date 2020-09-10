@@ -14,6 +14,13 @@
     margin-left:55px;
 }
 
+.papertradehome{
+    color:rgb(255, 255, 255);
+    font-size: 70px;
+    font-weight: bold;
+    margin-left:55px;
+}
+
 .papertrade:hover{
     color:rgb(221, 221, 221);
 }
@@ -143,7 +150,7 @@
 }
 
 .homeinput{
-    width:500px;
+    width:90%;
     border:none;
     border-bottom:1px solid #404040;
 }
@@ -195,6 +202,8 @@
     border:#404040 3px solid;
     margin-top:10px;
     border-radius: 50px;
+    margin-left: 28%;
+
 }
 
 
@@ -422,10 +431,12 @@
 .aisle{
     border-left:#dee2e6 1px solid;
     border-right:#dee2e6 1px solid;
+    border-bottom:#dee2e6 1px solid;
 }
 
 .aislelast{
     border-left:#dee2e6 1px solid;
+    border-bottom:#dee2e6 1px solid;
     // border-right:#dee2e6 1px solid;
 }
 
@@ -440,6 +451,14 @@
 .headerpadding{
     padding-left: 35px !important;
     border:0px !important;
+    border-top:0px !important;
+}
+
+.nameheaderpadding{
+    padding-left: 35px !important;
+    border:0px !important;
+    border-top:0px !important;
+    padding-left:20px;
 }
 
 .sellheaderpadding{
@@ -704,8 +723,14 @@
 
 .mystockborder{
     border-left:1px solid #dee2e6;
+    border-bottom:#dee2e6 1px solid !important;
 }
 
 .sell{
     border:0px !important;
+    padding-left: 120px !important;
+}
+
+.mystocksborder{
+   border-bottom:#dee2e6 1px solid;
 }
