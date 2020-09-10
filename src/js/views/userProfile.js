@@ -3,7 +3,8 @@ import PropsTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Header } from "../component/header";
 import { Navbar } from "../component/navbar";
-//create your first component
+import { Context } from "../store/appContext";
+
 export class UserProfile extends React.Component {
 	constructor(props) {
 		super(props);
@@ -41,14 +42,17 @@ export class UserProfile extends React.Component {
 	render() {
 		return (
 			<div>
-				<Header />
-				<div className="mystockstitle">User Profile</div>
-				<Navbar />
-				<form className="editform">
-					<div>
-						<div className="editprofileuserprofile">Edit Profile</div>
-						<label className="label userprofilepadding">{store.user.username}</label>
-						{/* <input
+				<Context.Consumer>
+					{({ store, actions }) => (
+						<>
+							<Header />
+							<div className="mystockstitle">User Profile</div>
+							<Navbar />
+							<form className="editform">
+								<div className="d-block">
+									<div className="editprofileuserprofile">Edit Profile</div>
+									<div className="editprofile-username userprofilepadding">{store.user.username}</div>
+									{/* <input
 								onChange={event => {
 									this.setState({ ...this.state, fullName: event.target.value });
 								}}
@@ -57,50 +61,59 @@ export class UserProfile extends React.Component {
 								placeholder="Enter New Username"
 								value={this.state.full_name}
 							/> */}
-					</div>
-					<div className="form-group userprofilepadding">
-						<label />
-						<input
-							onChange={event => {
-								this.setState({ ...this.state, email: event.target.value });
-							}}
-							type="email"
-							className="newemail form-control"
-							placeholder="Enter New Email"
-							value={this.state.email}
-						/>
-					</div>
-					<div className="form-group userprofilepadding">
-						<label />
-						<input
-							onChange={event => {
-								this.setState({ ...this.state, password: event.target.value });
-							}}
-							type="password"
-							className="userprofilepassword form-control"
-							placeholder="Enter New Password"
-							value={this.state.password}
-						/>
-					</div>
-					<button
-						className="cancelbutton text-center"
-						href="/mystocks"
-						onClick={() => this.props.history.push("/myStocks")}>
-						Cancel
-					</button>
-					<button
-						// disabled={disabledButton}
-						className="savebutton"
-						onClick={() => {
-							this.editContact(this.state.fullName, this.state.email, this.props.match.params.id);
-							this.props.history.push("/userprofile");
-						}}
-						type="button"
-						// className={`btn ${disabledButton ? "btn-secondary" : "btn-primary"} form-control`}
-					>
-						Save
-					</button>
-				</form>
+								</div>
+								<div className="form-group userprofilepadding">
+									<label />
+									<input
+										onChange={event => {
+											this.setState({ ...this.state, email: event.target.value });
+										}}
+										type="email"
+										className="newemail form-control"
+										placeholder="Enter New Email"
+										value={this.state.email}
+									/>
+								</div>
+								<div className="form-group userprofilepadding">
+									<label />
+									<input
+										onChange={event => {
+											this.setState({ ...this.state, password: event.target.value });
+										}}
+										type="password"
+										className="userprofilepassword form-control"
+										placeholder="Enter New Password"
+										value={this.state.password}
+									/>
+								</div>
+								<div className="profile-buttons">
+									<button
+										// disabled={disabledButton}
+										className="savebutton"
+										onClick={() => {
+											this.editContact(
+												this.state.fullName,
+												this.state.email,
+												this.props.match.params.id
+											);
+											this.props.history.push("/userprofile");
+										}}
+										type="button"
+										// className={`btn ${disabledButton ? "btn-secondary" : "btn-primary"} form-control`}
+									>
+										Save
+									</button>
+									<button
+										className="cancelbutton text-center"
+										href="/mystocks"
+										onClick={() => this.props.history.push("/myStocks")}>
+										Cancel
+									</button>
+								</div>
+							</form>
+						</>
+					)}
+				</Context.Consumer>
 			</div>
 		);
 	}

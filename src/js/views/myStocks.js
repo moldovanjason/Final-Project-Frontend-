@@ -11,11 +11,7 @@ export function MyStocks(props) {
 	const [shares, setShares] = useState(0);
 	const [portfolio, setPortfolio] = useState([]);
 	useEffect(() => {
-<<<<<<< HEAD
-		fetch("https://3000-dc5b60a1-e9c7-47df-8afe-d76da2d221f2.ws-us02.gitpod.io/portfolio/3")
-=======
-		fetch("https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io/portfolio/1")
->>>>>>> cce46a4d984f580ef0e7ae6a1c59a6c5ecc1deb6
+		fetch("https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io//portfolio/1")
 			.then(response => response.json())
 			.then(data => setPortfolio(data));
 		// create another fetch to compare with data from user

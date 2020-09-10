@@ -17,28 +17,29 @@ export function TradeStocks(props) {
 			<Header />
 			<div className="mystockstitle">Trade Stocks</div>
 			<Navbar />
-			<thead>
-				<tr>
-					<th scope="col" className="buytradestocks">
-						Buy
-					</th>
-					<th scope="col" className="symboltradestocks">
-						Symbol
-					</th>
-					<th scope="col" className="nametradestocks">
-						Name
-					</th>
-					<th scope="col" className="pricetradestocks">
-						Price
-					</th>
-				</tr>
-			</thead>
+
 			{store.currentStocks.length < 1 ? (
 				<div> Stock data is loading... </div>
 			) : (
 				store.currentStocks.map((stock, index) => {
 					return (
 						<table className="table" key={index}>
+							<thead>
+								<tr className="rowheaders">
+									<th scope="col" className="buytradestocks">
+										Buy
+									</th>
+									<th scope="col" className="symboltradestocks">
+										Symbol
+									</th>
+									<th scope="col" className="nametradestocks">
+										Name
+									</th>
+									<th scope="col" className="pricetradestocks">
+										Price
+									</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr className="">
 									<td>

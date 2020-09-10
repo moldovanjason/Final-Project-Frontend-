@@ -9,9 +9,15 @@
 
 .papertrade{
     color:rgb(255, 255, 255);
-    font-size: 70px;
-    font-weight: bold;
-    margin-left:55px;
+    font-family: Roboto, sans-serif;
+    font-size: 4rem;
+    font-weight: 500;
+    margin-left: 55px;
+    text-shadow: 
+    0px 3px 0px #54d47b,
+    0px 14px 10px rgba(2, 35, 97, 0.15),
+    0px 18px 10px rgba(2, 35, 97, 0.15),
+    0px 24px 30px rgba(2, 35, 97, 0.15); 
 }
 
 .papertradehome{
@@ -195,17 +201,18 @@
     }
 
 .editform{
-    height:400px;
+    display: block;
+    justify-content: center;
+    height: 400px;
     font-size: 25px;
-    margin: auto;
-    width: 42%;
-    border:#404040 3px solid;
-    margin-top:10px;
-    border-radius: 50px;
-    margin-left: 28%;
+    margin: 50px auto;
+    width: 40%;
+    border-radius: 5px;
+    text-align: center;
+    padding-top: 20px;
+    box-shadow: -2px 26px 50px 1px rgba(63, 88, 105, 0.5);
 
 }
-
 
 .number{
     position: relative;
@@ -214,7 +221,7 @@
 
 .navbar{
     background-color:#4ea7db;
-    height:40px;
+    height: 40px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -454,11 +461,10 @@
     border-top:0px !important;
 }
 
-.nameheaderpadding{
+.nameheaderpadding {
     padding-left: 35px !important;
     border:0px !important;
     border-top:0px !important;
-    padding-left:20px;
 }
 
 .sellheaderpadding{
@@ -467,27 +473,26 @@
 }
 
 .cancelbutton{
-    width:100px;
+    width:150px;
     height:50px;
-    background-color: rgb(230, 72, 44) ;
-    color:white;
-    margin:5px;
+    background-color:orangered;
+    color: white;
+    margin: 25px;
     border-radius: 5px;
     text-shadow:1px 1px 7px #404040;
-    margin-left:31%;
-    border:0px;
-    box-shadow: 1px 3px 10px #00395a;
+    border: 2px solid orangered;
+    box-shadow: 1px 5px 10px #888888a9;
 }
 
 .cancelbutton:hover{
     color:rgb(202, 202, 202);
 }
 
-.rowheaders{
+.rowheaders {
+    border-bottom: 4px solid rgba(211, 211, 211, 0.6);
+    color: gray;
     //border-bottom:#9c9c9c 3px solid !important;
-
 }
-
 
 .wholetable{
     margin: 15px;
@@ -495,40 +500,46 @@
     display:flex;
 }
 
-.userprofilepadding{
-    // padding:15px;
-    margin-left:200px;
+.userprofilepadding {
+    margin-top: 10px;
     margin-bottom:0px;
 }
 
-.savebutton{
-    width:100px;
+.profile-buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.savebutton {
+    width: 150px;
     height:50px;
     background-color: rgb(108, 206, 88) ;
     color:white;
-    margin:25px;
+    margin: 25px;
     border-radius: 5px;
-    text-shadow:1px 1px 7px #404040;
-    border:0px;
-    margin-left:8px;
+    text-shadow: 1px 1px 7px #404040;
+    border: 0px;
     box-shadow: 1px 5px 10px #888888;
 }
 
-.editprofileuserprofile{
-    width:25%;
-    margin:auto;
-    margin-top:35px;
-    margin-left:240px;
-    font-weight: bold;
-    color:#404040;
+.editprofile-username {
+    color: #4ea7db;
+}
 
+.editprofileuserprofile{
+    font-size: 1.4em;
+    font-weight: 400;
+    color: gray;
 }
 
 .userprofilepassword{
     width:50%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius:0px;
     border:none;
-    border-bottom:1px solid #404040;
+    border-bottom:1px solid lightgray;
 }
 
 .userprofilepassword:focus{
@@ -537,9 +548,11 @@
 
 .newemail{
     width:50%;
+    margin-left: auto;
+    margin-right: auto; 
     border-radius:0px;
     border:none;
-    border-bottom:1px solid #404040;
+    border-bottom:1px solid lightgray;
 }
 
 .username{
