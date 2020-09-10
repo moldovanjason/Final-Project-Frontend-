@@ -327,6 +327,7 @@
     width:257px;
     position: relative;
     right:1px;
+    height:90px;
 }
 
 .signupinput{
@@ -355,7 +356,6 @@
 .createaccountbutton{
     background:#42b833;
     color:rgb(255, 255, 255);
-    width:140px;
     height:50px;
     font-size:15px;
     border-radius: 5px;
@@ -364,6 +364,8 @@
     position:relative;
     box-shadow: 1px 3px 10px #00395a;
     padding:0px;
+    margin-right:0px;
+    width:135px;
 }
 
 .createaccountbutton:hover{
@@ -480,15 +482,16 @@
 }
 
 .cancelbutton{
-    width:150px;
     height:50px;
     background-color:orangered;
     color: white;
-    margin: 25px;
     border-radius: 5px;
     text-shadow:1px 1px 7px #404040;
     border: 2px solid orangered;
-    box-shadow: 1px 5px 10px #888888a9;
+    box-shadow: 1px 3px 10px #00395a;
+    width: 80px;
+    margin: 13px;
+    margin-left:22px;
 }
 
 .cancelbutton:hover{
