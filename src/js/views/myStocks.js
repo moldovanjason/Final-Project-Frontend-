@@ -10,13 +10,13 @@ export function MyStocks(props) {
 	const { store, actions } = useContext(Context);
 	const [shares, setShares] = useState(0);
 	const [portfolio, setPortfolio] = useState([]);
+
 	useEffect(() => {
 		fetch("https://3000-db7faf47-57eb-437f-9041-fb8b878c370d.ws-us02.gitpod.io//portfolio/1")
 			.then(response => response.json())
 			.then(data => setPortfolio(data));
 		// create another fetch to compare with data from user
-	});
-	[];
+	}, []);
 
 	// for current value column, we need to loop through store.currentStocks,
 	// compair symbols from stock symbol in portfolio, and when symbol matched
@@ -25,9 +25,14 @@ export function MyStocks(props) {
 	const currentPrice = symbol => {
 		if (store.currentStocks) {
 			let stock = store.currentStocks.filter(stock => symbol == stock.symbol);
-			if (stock.length) return stock[0].price;
-		} else return 0;
+			if (stock.length > 0) {
+				return stock[0].price;
+			} else {
+				return 0;
+			}
+		}
 	};
+
 	console.log(portfolio);
 	const listOfStocks = portfolio.map((stock, index) => {
 		return (
@@ -107,7 +112,3 @@ export function MyStocks(props) {
 		</div>
 	);
 }
-
-MyStocks.propTypes = {
-	history: PropTypes.object
-};

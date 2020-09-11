@@ -18,30 +18,30 @@ export function TradeStocks(props) {
 			<div className="mystockstitle">Trade Stocks</div>
 			<Navbar />
 
-			{store.currentStocks.length < 1 ? (
-				<div> Stock data is loading... </div>
-			) : (
-				store.currentStocks.map((stock, index) => {
-					return (
-						<table className="table" key={index}>
-							<thead>
-								<tr className="rowheaders">
-									<th scope="col" className="buytradestocks">
-										Buy
-									</th>
-									<th scope="col" className="symboltradestocks">
-										Symbol
-									</th>
-									<th scope="col" className="nametradestocks">
-										Name
-									</th>
-									<th scope="col" className="pricetradestocks">
-										Price
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr className="">
+			<table className="table">
+				<thead>
+					<tr className="rowheaders">
+						<th scope="col" className="buytradestocks">
+							Buy
+						</th>
+						<th scope="col" className="symboltradestocks">
+							Symbol
+						</th>
+						<th scope="col" className="nametradestocks">
+							Name
+						</th>
+						<th scope="col" className="pricetradestocks">
+							Price
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					{store.currentStocks.length < 1 ? (
+						<div> Stock data is loading... </div>
+					) : (
+						store.currentStocks.map((stock, index) => {
+							return (
+								<tr className="" key={index}>
 									<td>
 										<Link to="/mystocks">
 											<button
@@ -76,11 +76,11 @@ export function TradeStocks(props) {
 									<td className="tradestockssymbol">{stock.name}</td>
 									<td className="tradestockssymbol">{stock.price}</td>
 								</tr>
-							</tbody>
-						</table>
-					);
-				})
-			)}
+							);
+						})
+					)}
+				</tbody>
+			</table>
 		</div>
 	);
 }

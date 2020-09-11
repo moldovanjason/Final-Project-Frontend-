@@ -15,7 +15,7 @@ export const Header = props => {
 	// const [shares, setShares] = useState(0);
 	// console.log(props);
 	return (
-		<div className="row header navbar-expand-lg d-flex">
+		<div className="row header navbar-expand-lg d-flex pt-3">
 			<div className="col-8">
 				<Link className="papertrade navbar-brand" to="/mystocks">
 					<span>
