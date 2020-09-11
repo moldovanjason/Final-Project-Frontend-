@@ -26,7 +26,7 @@ export const Navbar = props => {
 					Transaction History
 				</Link>
 				<Link className="newnavleaderboards" to="/leaderboard">
-					Leader Boards
+					Leader Board
 				</Link>
 				<Link className="newnavmystocks" to="/mystocks">
 					My Stocks

@@ -8,7 +8,7 @@ export function LeaderBoard(props) {
 	return (
 		<div>
 			<Header />
-			<div className="mystockstitle">Leader Boards</div>
+			<div className="mystockstitle">Leader Board</div>
 			<Navbar />
 
 			<table className="table tableheadertop">
