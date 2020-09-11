@@ -10,8 +10,6 @@ export function TradeStocks(props) {
 	const [shares, setShares] = useState(0);
 	const { store, actions } = useContext(Context);
 
-	useEffect(() => {}, []);
-
 	return (
 		<div>
 			<Header />

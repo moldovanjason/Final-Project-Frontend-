@@ -116,13 +116,13 @@
 
 
 .loginbutton{
-    background:#42b833;
+    background: #5eff49;
+    text-shadow: 0 1px 1px #404040, 1px 1px 10px #404040;
     color:rgb(255, 255, 255);
     width:100px;
     height:43px;
     font-size:22px;
     border-radius: 5px;
-    text-shadow:1px 1px 4px #404040;
     border:0px;
     position:relative;
     box-shadow: 1px 5px 10px #888888;
@@ -288,6 +288,20 @@
     color:rgb(221, 221, 221);
 }
 
+.totalvalue {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: #3b89b6;
+}
+
+.portfoliovalue {
+    font-weight: 500;
+    font-size: 1.1em;
+    background-color: #4ea7db;
+    color: white;
+    border-bottom: 3px solid #5eff49 !important;
+}
+
 .mystocks{
     color:rgb(255, 255, 255);
     font-size:20px;
@@ -311,7 +325,7 @@
 
 .signupmodalheader{
     background:#4ea7db;
-    width:257px;
+    width: 100%;
     position: relative;
     right:1px;
     bottom:2px;
@@ -324,10 +338,12 @@
 
 .signupmodalfooter{
     background:#4ea7db;
-    width:257px;
-    position: relative;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
     right:1px;
     height:90px;
+    padding: 0;
 }
 
 .signupinput{
@@ -343,29 +359,50 @@
     color:white;
 }
 
-.signupmodal{
-    width:257px;
-    height:380px;
+.signupmodal {
+    width: 360px;
+    height: 520px;
     position: relative;
     left:120px;
-
-//     filter: blur(2px);
-//   -webkit-filter: blur(2px);
 }
 
+.signupmodal form {
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.form-row div {
+    width: 90%;
+}
+
+.form-row div * {
+    display: block !important;
+}
+
+.form-row input {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.form-row label {
+    margin-left: 10px;
+}    
+
 .createaccountbutton{
-    background:#42b833;
+    background: #5eff49;
+    text-shadow: 0 1px 1px #404040, 1px 1px 10px #404040;
     color:rgb(255, 255, 255);
     height:50px;
-    font-size:15px;
+    font-size: 1.1em;
+    font-weight: 500;
     border-radius: 5px;
-    text-shadow:1px 1px 4px #404040;
     border:0px;
     position:relative;
     box-shadow: 1px 3px 10px #00395a;
     padding:0px;
-    margin-right:0px;
-    width:135px;
+    margin: 25px;
+    width: 150px;
 }
 
 .createaccountbutton:hover{
@@ -482,15 +519,17 @@
 }
 
 .cancelbutton{
+    width: 150px;
     height:50px;
     background-color:orangered;
+    font-size: 1.1em;
+    font-weight: 500;
     color: white;
     border-radius: 5px;
-    text-shadow:1px 1px 7px #404040;
+    text-shadow: 1px 1px 6px #404040;
     border: 2px solid orangered;
     box-shadow: 1px 3px 10px #00395a;
-    width: 80px;
-    margin: 13px;
+    margin: 25px;
     margin-left:22px;
 }
 
@@ -524,11 +563,11 @@
 .savebutton {
     width: 150px;
     height:50px;
-    background-color: rgb(108, 206, 88) ;
+    background-color: #5eff49;
     color:white;
     margin: 25px;
     border-radius: 5px;
-    text-shadow: 1px 1px 7px #404040;
+    text-shadow: 0 1px 2px #404040, 1px 1px 10px #404040;
     border: 0px;
     box-shadow: 1px 5px 10px #888888;
 }
@@ -588,7 +627,6 @@
 
 .usernameheader{
     color:white;
-    // padding-right:0px;
 }
 
 .portfoliovalueheader{
@@ -724,13 +762,13 @@
 }
 
 .buystockbutton{
-    background:#42b833;
+    background:#5eff49;
     color:rgb(255, 255, 255);
     width:90px;
     height:38px;
     font-size:20px;
     border-radius: 5px;
-    text-shadow:1px 1px 4px #404040;
+    text-shadow: 1px 1px 3px #404040, 1px 1px 12px #2b2a2a;
     border:0px;
     position:relative;
     box-shadow: 1px 5px 10px #888888;

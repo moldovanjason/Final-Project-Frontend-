@@ -95,7 +95,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(res => res.json())
 					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => console.log(err.message));
+				console.log("Stock Data Reloaded");
 			},
+
 			loginUser: (username, password) => {
 				fetch(URI + "/login", {
 					method: "POST",
@@ -108,9 +110,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.json())
 					.then(data => setStore({ token: data.jwt, user: data.user }));
 			},
+
 			logoutUser: () => {
 				setStore({ token: null, user: null });
 			},
+
 			getUsers: async () => {
 				let users = [];
 				try {
