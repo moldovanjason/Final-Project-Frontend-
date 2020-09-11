@@ -27,7 +27,7 @@ export const Header = props => {
 			</div>
 			<div className="col-2 info">
 				<div className="usernameheader">Jason Moldovan</div>
-				<div className="portfoliovalueheader">Starting balance: $ 50,000.00</div>
+				<div className="portfoliovalueheader">Starting balance: $ 50,000</div>
 				<div className="buyingpowerheader">
 					Buying Power: $ {store.allUsers[0] ? store.allUsers[0].buying_power : " ... "}
 				</div>

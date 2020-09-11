@@ -796,3 +796,28 @@
 .mystocksborder{
    border-bottom:#dee2e6 1px solid;
 }
+
+.greenrow{
+    color:rgb(0, 209, 0);
+}
+
+.redrow{
+    color:red;
+}
+
+.rowgray{
+    color:rgb(110, 110, 110);
+}
+
+.rowgray:hover{
+    background:rgb(223, 255, 204);
+}
+
+.rowred{
+    color:rgb(110, 110, 110);
+}
+
+.rowred:hover{
+    color:rgb(110, 110, 110);
+    background:rgb(255, 193, 193);
+}
