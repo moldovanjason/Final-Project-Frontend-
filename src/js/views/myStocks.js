@@ -33,7 +33,7 @@ export function MyStocks(props) {
 		}
 	};
 
-	console.log(portfolio);
+	console.log("portfolio", portfolio);
 	const listOfStocks = portfolio.map((stock, index) => {
 		return (
 			<tr className="tablerow" key={index}>

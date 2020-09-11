@@ -20,7 +20,7 @@ export const Header = props => {
 				<Link className="papertrade navbar-brand" to="/mystocks">
 					<span>
 						<i className="fas fa-chart-bar" />
-						PaperTrade
+						&nbsp;PaperTrade
 					</span>
 				</Link>
 			</div>
@@ -41,7 +41,7 @@ export const Header = props => {
 				</div>
 				<div className="buyingpowerheader">
 					{/* Buying Power: $50,000 */}
-					Buying Power: ${store.user.buyingPower}
+					Buying Power: $ {store.allUsers[0] ? store.allUsers[0].buying_power : " ... "}
 				</div>
 			</div>
 		</div>

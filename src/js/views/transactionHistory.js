@@ -9,12 +9,16 @@ import { Header } from "../component/header";
 export function TransactionHistory(props) {
 	const { store, actions } = useContext(Context);
 	const [transactions, setTransactions] = useState([]);
+
 	useEffect(() => {
-		fetch("https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io/transaction")
+		fetch("https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io/transactions/1")
 			.then(response => response.json())
-			.then(data => setTransactions(data.Transactions));
+			.then(data => setTransactions(data))
+			.catch(err => console.log(err.message));
 		// create another fetch to compare with data from user
 	}, []);
+
+	console.log("transactions hook", transactions);
 
 	const listOfStocks = transactions.map((transaction, index) => {
 		return (
@@ -46,7 +50,7 @@ export function TransactionHistory(props) {
 								Symbol
 							</th>
 							<th scope="col" className="headerpadding">
-								Transaction Name
+								Transaction Type
 							</th>
 							<th scope="col" className="headerpadding">
 								Price

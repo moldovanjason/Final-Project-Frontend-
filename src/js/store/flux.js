@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => console.log(err.message));
 			},
 
-			getPotfolio: async () => {
+			getPortfolio: async () => {
 				let updatedPortfolio = [];
 				try {
 					let response = await fetch(URI + "/portfolio/1", {
@@ -46,15 +46,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						headers: { "Content-Type": "application/json" }
 					});
 					if (response.ok) {
-						updatsedPortfolio = await response.json();
+						updatedPortfolio = await response.json();
 					}
 				} catch (err) {
-					console.log(err);
+					console.log(err.message);
 				}
 				setStore({
 					portfolio: updatedPortfolio
 				});
-				console.log("Users", users);
 			},
 
 			buyStock: (userId, symbol, companyName, price, shares, totalReturn) => {
@@ -123,12 +122,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 						users = await response.json();
 					}
 				} catch (err) {
-					console.log(err);
+					console.log(err.message);
 				}
 				setStore({
 					allUsers: users
 				});
-				console.log("Users", users);
+				console.log("allUsers", getStore().allUsers);
 			}
 		}
 	};
