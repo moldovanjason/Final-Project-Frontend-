@@ -12,7 +12,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				password: "okokokok",
 				it_active: true,
 				portfolioValue: "64,562.47",
-				// buyingPower: "34,550.00",
+				buyingPower: "34,550.00",
 				portfolio: []
 			},
 			allUsers: [],

@@ -13,7 +13,7 @@ export const Header = props => {
 	// }
 	const { store, actions } = useContext(Context);
 	// const [shares, setShares] = useState(0);
-	// console.log(props);
+
 	return (
 		<div className="row header navbar-expand-lg d-flex pt-3">
 			<div className="col-8">
@@ -42,6 +42,7 @@ export const Header = props => {
 				<div className="buyingpowerheader">
 					{/* Buying Power: $50,000 */}
 					Buying Power: $ {store.allUsers[0] ? store.allUsers[0].buying_power : " ... "}
+
 				</div>
 			</div>
 		</div>
