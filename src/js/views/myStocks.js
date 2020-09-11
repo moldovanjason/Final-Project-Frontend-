@@ -12,16 +12,13 @@ export function MyStocks(props) {
 	const [portfolio, setPortfolio] = useState([]);
 	var currentValue = 0.0;
 
-	useEffect(
-		() => {
-			fetch("https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io/portfolio/1")
-				.then(response => response.json())
-				.then(data => setPortfolio(data))
-				.catch(err => err.message);
-			// create another fetch to compare with data from user
-		},
-		[portfolio]
-	);
+	useEffect(() => {
+		fetch("https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io/portfolio/1")
+			.then(response => response.json())
+			.then(data => setPortfolio(data))
+			.catch(err => err.message);
+		// create another fetch to compare with data from user
+	});
 
 	const currentPrice = symbol => {
 		if (store.currentStocks) {
@@ -52,7 +49,7 @@ export function MyStocks(props) {
 								setShares(event.target.value);
 							}}
 							className="input"
-							type="number"
+							type="text"
 							aria-describedby="emailHelp"
 							placeholder="0"
 						/>
@@ -61,9 +58,9 @@ export function MyStocks(props) {
 					<td className="aisle">{stock.companyName}</td>
 					<td className="aisle">{stock.shares}</td>
 					<td className="aisle">{stock.price}</td>
-					<td className="aisle">{currentPrice(stock.symbol)}</td>
-					<td className="aisle">{stock.shares * currentPrice(stock.symbol)}</td>
-					<td className="aislelast">{currentPrice(stock.symbol) - stock.price}</td>
+					<td className="aisle">{currentPrice(stock.symbol).toFixed(2)}</td>
+					<td className="aisle">{(stock.shares * currentPrice(stock.symbol)).toFixed(2)}</td>
+					<td className="aislelast">{(currentPrice(stock.symbol) - stock.price).toFixed(3)}</td>
 				</tr>
 			);
 		});
@@ -124,7 +121,7 @@ export function MyStocks(props) {
 							<td className="aisle" />
 							<td className="aisle" />
 							<td className="aisle totalvalue">Stocks value</td>
-							<td className="aisle totalvalue">{getCurrentValue()}</td>
+							<td className="aisle totalvalue">{getCurrentValue().toFixed(2)}</td>
 							<td className="aisle" />
 						</tr>
 						<tr>
@@ -135,7 +132,9 @@ export function MyStocks(props) {
 							<td className="aisle" />
 							<td className="aisle portfoliovalue">Portfolio today</td>
 							<td className="aisle portfoliovalue">
-								{store.allUsers[0] ? store.allUsers[0].buying_power + getCurrentValue() : " ... "}
+								{store.allUsers[0]
+									? (store.allUsers[0].buying_power + getCurrentValue()).toFixed(2)
+									: " ... "}
 							</td>
 							<td className="aisle" />
 						</tr>
