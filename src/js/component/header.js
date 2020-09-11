@@ -8,19 +8,15 @@ import { Context } from "../store/appContext";
 import Logo from "../../img/Logo-nooutline.png";
 
 export const Header = props => {
-	// const CalcPortfolio=()=>{
-
-	// }
 	const { store, actions } = useContext(Context);
-	// const [shares, setShares] = useState(0);
 
 	return (
-		<div className="row header navbar-expand-lg d-flex">
+		<div className="row header navbar-expand-lg d-flex pt-3">
 			<div className="col-8">
 				<Link className="papertrade navbar-brand" to="/mystocks">
 					<span>
 						<i className="fas fa-chart-bar" />
-						PaperTrade
+						&nbsp;PaperTrade
 					</span>
 				</Link>
 			</div>
@@ -30,18 +26,10 @@ export const Header = props => {
 				</Link>
 			</div>
 			<div className="col-2 info">
-				<div className="usernameheader">
-					{/* *username* */}
-					{store.user.username}
-				</div>
-				<div className="portfoliovalueheader">
-					{/* Portfolio Value: $50,000 */}
-					Portfolio Value: $ {store.user.portfolioValue}
-					{/* (50,000-buying-Power)+stock.share*current price(stock.symbol) */}
-				</div>
+				<div className="usernameheader">Jason Moldovan</div>
+				<div className="portfoliovalueheader">Starting balance: $ 50,000.00</div>
 				<div className="buyingpowerheader">
-					{/* Buying Power: $50,000 */}
-					Buying Power: $ {store.user.buyingPower}
+					Buying Power: $ {store.allUsers[0] ? store.allUsers[0].buying_power : " ... "}
 				</div>
 			</div>
 		</div>

@@ -45,8 +45,8 @@ export const SignUpModal = props => {
 					<form>
 						<div className="modal-body">
 							<div className="form-row">
-								<div className="usernamesignup form-group ">
-									<label htmlFor="inputFirstName">USERNAME</label>
+								<div className="usernamesignup form-group">
+									<label htmlFor="inputFirstName d-block">USERNAME</label>
 									<input
 										onChange={event => {
 											setState({ ...state, username: event.target.value });

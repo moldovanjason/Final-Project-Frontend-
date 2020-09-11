@@ -1,4 +1,4 @@
-const URI = "https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io/";
+const URI = "https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
@@ -38,7 +38,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => console.log(err.message));
 			},
 
-			getPotfolio: async () => {
+			getPortfolio: async () => {
 				let updatedPortfolio = [];
 				try {
 					let response = await fetch(URI + "/portfolio/1", {
@@ -46,15 +46,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 						headers: { "Content-Type": "application/json" }
 					});
 					if (response.ok) {
-						updatsedPortfolio = await response.json();
+						updatedPortfolio = await response.json();
 					}
 				} catch (err) {
-					console.log(err);
+					console.log(err.message);
 				}
 				setStore({
 					portfolio: updatedPortfolio
 				});
-				console.log("Users", users);
 			},
 
 			buyStock: (userId, symbol, companyName, price, shares, totalReturn) => {
@@ -70,7 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				})
 					.then(data => data.json())
-					.then(response => alert("Thank you for your puchase!"))
+					.then(response => alert("Your purchase was completed!"))
 
 					.catch(error => console.log(error.message));
 			},
@@ -92,12 +91,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 			loadStockData: () => {
 				const store = getStore();
-
 				fetch("https://financialmodelingprep.com/api/v3/stock/list?apikey=f19b2da4e27cfbbaeaa219bc4d346fd5")
 					.then(res => res.json())
 					.then(data => setStore({ ...store, currentStocks: data.slice(0, 50) }))
 					.catch(err => console.log(err.message));
+				console.log("Stock Data Reloaded");
 			},
+
 			loginUser: (username, password) => {
 				fetch(URI + "/login", {
 					method: "POST",
@@ -110,9 +110,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(response => response.json())
 					.then(data => setStore({ token: data.jwt, user: data.user }));
 			},
+
 			logoutUser: () => {
 				setStore({ token: null, user: null });
 			},
+
 			getUsers: async () => {
 				let users = [];
 				try {
@@ -124,12 +126,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 						users = await response.json();
 					}
 				} catch (err) {
-					console.log(err);
+					console.log(err.message);
 				}
 				setStore({
 					allUsers: users
 				});
-				console.log("Users", users);
+				console.log("allUsers", getStore().allUsers);
 			}
 		}
 	};
