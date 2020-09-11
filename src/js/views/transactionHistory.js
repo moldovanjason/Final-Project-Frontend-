@@ -10,7 +10,7 @@ export function TransactionHistory(props) {
 	const { store, actions } = useContext(Context);
 	const [transactions, setTransactions] = useState([]);
 	useEffect(() => {
-		fetch("https://3000-fc70a934-d2ac-4310-bb33-5f5297c70a9e.ws-us02.gitpod.io/transaction")
+		fetch("https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io/transaction")
 			.then(response => response.json())
 			.then(data => setTransactions(data.Transactions));
 		// create another fetch to compare with data from user
