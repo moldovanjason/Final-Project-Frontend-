@@ -31,9 +31,6 @@ const Layout = () => {
 						<Route exact path="/tradestocks" component={TradeStocks} />
 						<Route exact path="/leaderboard" component={LeaderBoard} />
 						<Route exact path="/transactionhistory" component={TransactionHistory} />
-
-						{/* <Route exact path="/planetsdetails/:id" component={PlanetsDetails} />
-						<Route exact path="/charactersdetails/:id" component={CharactersDetails} /> */}
 						<Route>
 							<h1 className="nf">***Page Not Found***</h1>
 						</Route>

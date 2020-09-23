@@ -52,15 +52,6 @@ export class UserProfile extends React.Component {
 								<div className="d-block">
 									<div className="editprofileuserprofile">Edit Profile</div>
 									<div className="editprofile-username userprofilepadding">{store.user.username}</div>
-									{/* <input
-								onChange={event => {
-									this.setState({ ...this.state, fullName: event.target.value });
-								}}
-								type="text"
-								className="nameinput"
-								placeholder="Enter New Username"
-								value={this.state.full_name}
-							/> */}
 								</div>
 								<div className="form-group userprofilepadding">
 									<label />

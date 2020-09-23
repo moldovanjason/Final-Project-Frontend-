@@ -81,14 +81,6 @@ export class Home extends React.Component {
 									<Link to={"/mystocks"}>
 										<button
 											type="button"
-											//onClick={() => actions.loginUser(this.state.username, this.state.password)}
-											// onClick={() => {
-											// 	if (this.state.username == store.user.username) {
-											// 		this.props.history.push("/myStocks");
-											// 	} else {
-											// 		alert("wrong username");
-											// 	}
-											// }}
 											className="loginbutton btn">
 											Log In
 										</button>
