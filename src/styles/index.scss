@@ -5,6 +5,7 @@
     background-color:#4ea7db;
     display: flex;
     justify-content: space-between;
+    padding:0px !important;
 }
 
 .papertrade{
@@ -14,10 +15,10 @@
     //font-weight: 400;
     margin-left: 55px;
     text-shadow: 
-    0px 3px 0px #38ce65,
+    0px 3px 0px #aaafab,
+    0px 10px 10px rgba(2, 35, 97, 0.15),
     0px 14px 10px rgba(2, 35, 97, 0.15),
-    0px 18px 10px rgba(2, 35, 97, 0.15),
-    0px 24px 30px rgba(2, 35, 97, 0.15); 
+    0px 20px 30px rgba(2, 35, 97, 0.15); 
 }
 
 .papertradehome{
@@ -299,7 +300,7 @@
     font-size: 1.1em;
     background-color: #4ea7db;
     color: white;
-    border-bottom: 3px solid #5eff49 !important;
+    // border-bottom: 3px solid #aaafab !important;
 }
 
 .mystocks{
@@ -327,9 +328,10 @@
     background:#4ea7db;
     width: 100%;
     position: relative;
-    right:1px;
+    right:0px;
     bottom:2px;
-    color:rgb(220, 220, 220)
+    color:rgb(220, 220, 220);
+    padding:0px;
 }
 
 .signuptitle{
@@ -341,7 +343,7 @@
     width: 100%;
     position: absolute;
     bottom: 0;
-    right:1px;
+    right:0px;
     height:90px;
     padding: 0;
 }

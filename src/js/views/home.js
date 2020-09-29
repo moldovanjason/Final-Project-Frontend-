@@ -79,9 +79,7 @@ export class Home extends React.Component {
 										/>
 									</div>
 									<Link to={"/mystocks"}>
-										<button
-											type="button"
-											className="loginbutton btn">
+										<button type="button" className="loginbutton btn">
 											Log In
 										</button>
 									</Link>

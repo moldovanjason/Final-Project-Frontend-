@@ -16,7 +16,7 @@ export const Header = props => {
 				<Link className="papertrade navbar-brand" to="/mystocks">
 					<span>
 						<i className="fas fa-chart-bar" />
-						&nbsp;PaperTrade
+						PaperTrade
 					</span>
 				</Link>
 			</div>
