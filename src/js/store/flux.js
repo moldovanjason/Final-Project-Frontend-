@@ -1,4 +1,4 @@
-const URI = "https://3000-b4b07a62-f7fa-4095-b283-fbaeea7cb56d.ws-us02.gitpod.io";
+const URI = process.env.URI;
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
