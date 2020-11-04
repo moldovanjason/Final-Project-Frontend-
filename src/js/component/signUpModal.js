@@ -33,7 +33,7 @@ export const SignUpModal = props => {
 						<h5 className="signuptitle modal-title">Sign Up</h5>
 						<button
 							type="button"
-							className="close"
+							className="xbutton close"
 							data-dismiss="modal"
 							aria-label="Close"
 							onClick={() => props.hideModal()}>
