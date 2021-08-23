@@ -1,16 +1,12 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
 import { Home } from "./views/home";
 import { MyStocks } from "./views/myStocks";
-import { NoPageFound } from "./views/noPageFound";
 import { TradeStocks } from "./views/tradeStocks";
 import { LeaderBoard } from "./views/leaderBoard";
 import injectContext from "./store/appContext";
 import { TransactionHistory } from "./views/transactionHistory";
-import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
 import { UserProfile } from "./views/userProfile";
 
 //create your first component
