@@ -1,6 +1,5 @@
 import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
-// import "../../styles/signUpModal.scss";
 import { Context } from "../store/appContext";
 
 export const SignUpModal = props => {
